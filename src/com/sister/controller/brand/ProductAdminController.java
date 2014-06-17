@@ -47,6 +47,7 @@ public class ProductAdminController {
 		Long idbrdPrd = ParamUtils.getLongParameter(request, "idbrdPrd", 0);
 		String namePrd = ParamUtils.getParameter(request, "namePrd");
 		String infoPrd = ParamUtils.getParameter(request, "infoPrd");
+		String infoEnPrd = ParamUtils.getParameter(request, "infoEnPrd");
 
 		try {
 			Map<String, Map<String, Object>> fileMap = UploadFileUtil.uploadMultiFile(request, Content.SRC_CON_PRODUCT, SisterConfig.MAX_UPLOADSIZE);
@@ -74,7 +75,8 @@ public class ProductAdminController {
 			}
 			product.setBrand(brand);
 			product.setNamePrd(namePrd);
-			product.setInfoPrd(infoPrd);
+			product.setInfoPrd(StringUtil.filterWordFormatAndSomeHTML(infoPrd));
+			product.setInfoEnPrd(StringUtil.filterWordFormatAndSomeHTML(infoEnPrd));
 			
 			//Logo
 			Content logo = (Content) logoMap.get(UploadFileUtil.UPLOAD_FILE);

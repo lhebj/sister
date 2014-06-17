@@ -4,6 +4,7 @@ public class ProductDTO {
 	private Long idPrd;
 	private String namePrd;
 	private String infoPrd;
+	private String infoEnPrd;
 	private String logoPathPrd;
 	private String logoNamePrd;
 	private String dateCreatePrd;
@@ -24,6 +25,12 @@ public class ProductDTO {
 	}
 	public void setInfoPrd(String infoPrd) {
 		this.infoPrd = infoPrd;
+	}
+	public String getInfoEnPrd() {
+		return infoEnPrd;
+	}
+	public void setInfoEnPrd(String infoEnPrd) {
+		this.infoEnPrd = infoEnPrd;
 	}
 	public String getLogoPathPrd() {
 		return logoPathPrd;

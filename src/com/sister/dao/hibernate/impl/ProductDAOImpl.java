@@ -45,7 +45,7 @@ public class ProductDAOImpl implements IProductDAO {
 	@Override
 	public List<Product> getProductListByBrandId(int start, int limit, long brandId) {
 		// TODO Auto-generated method stub
-		StringBuffer hql = new StringBuffer(" from Product where brand.isEnabledBrd=true");
+		StringBuffer hql = new StringBuffer(" from Product where brand.isEnabledBrd=true ");
 		Map<String, Object> param = new HashMap<String, Object>();
 		if (brandId != 0) {
 			hql.append("and brand.idBrd=:idBrd ");
@@ -57,7 +57,7 @@ public class ProductDAOImpl implements IProductDAO {
 
 	@Override
 	public int getProductTotalCountByBrandId(long brandId) {
-		StringBuffer hql = new StringBuffer(" from Product where brand.isEnabledBrd=true");
+		StringBuffer hql = new StringBuffer(" from Product where brand.isEnabledBrd=true ");
 		Map<String, Object> param = new HashMap<String, Object>();
 		if (brandId != 0) {
 			hql.append("and brand.idBrd=:idBrd ");

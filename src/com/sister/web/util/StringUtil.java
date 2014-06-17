@@ -28,11 +28,12 @@ public final class StringUtil {
 	private static final Pattern domainPattern = Pattern.compile("(?<=.*?)(\\.[^\\.]*+\\.)(com|net|org|gov|cc|biz|info|cn|co|edu)(\\.(cn|hk|uk|jp|tw))*");
 	private static final Pattern illegal_screen_name_pattern = Pattern.compile("[^a-zA-Z0-9-_\u4E00-\u9FA5]|^[_-]+");
 	private static final Pattern mobile_pattern = Pattern.compile("^((13[0-9])|(14[5,7])|(15[^4,\\D])|(18[0-9]))\\d{8}$");
-//	private static final Pattern legal_screen_name_pattern = Pattern.compile("([[a-zA-Z0-9\u4E00-\u9FA5]{1}][a-zA-Z0-9_\\-\u4E00-\u9FA5]{0,19})|(\\-{1}[a-zA-Z0-9_\\-\u4E00-\u9FA5]*[a-zA-Z0-9\u4E00-\u9FA5]+[a-zA-Z0-9_\\-\u4E00-\u9FA5]*)");
+	// private static final Pattern legal_screen_name_pattern =
+	// Pattern.compile("([[a-zA-Z0-9\u4E00-\u9FA5]{1}][a-zA-Z0-9_\\-\u4E00-\u9FA5]{0,19})|(\\-{1}[a-zA-Z0-9_\\-\u4E00-\u9FA5]*[a-zA-Z0-9\u4E00-\u9FA5]+[a-zA-Z0-9_\\-\u4E00-\u9FA5]*)");
 
 	// 如果反向代理的ip列表过长，则默认只截取前128个字符
 	private static final int DEFAULT_XFORWARDED_IP_LIMIT = 128;
-	
+
 	public static String encodingFileName(String fileName) {
 		String returnFileName = "";
 		try {
@@ -134,7 +135,7 @@ public final class StringUtil {
 		}
 		Pattern pattern = null;
 		pattern = Pattern.compile("([a-zA-Z]{1}[a-zA-Z0-9_\\-]*)|([0-9]{1}[a-zA-Z0-9_\\-]*[a-zA-Z_\\-]+[a-zA-Z0-9_\\-]*)");
-		
+
 		Matcher matcher = pattern.matcher(username);
 		if (matcher.matches()) {
 			return true;
@@ -150,7 +151,7 @@ public final class StringUtil {
 	 * @return
 	 */
 	public static boolean isEmail(String email) {
-		if(isNull(email)) {
+		if (isNull(email)) {
 			return false;
 		}
 		Pattern pattern = Pattern.compile("^([\\w]+)(.[\\w]+)*@([\\w-]+\\.){1,5}([A-Za-z]){2,4}$");
@@ -199,13 +200,13 @@ public final class StringUtil {
 	 * @return
 	 */
 	public static boolean isRealName(String realName) {
-		if (realName.length() > 20){
+		if (realName.length() > 20) {
 			return false;
 		}
 		Matcher matcher = illegal_screen_name_pattern.matcher(realName);
 		if (matcher.find()) {
 			return false;
-		} else{
+		} else {
 			return true;
 		}
 	}
@@ -308,8 +309,9 @@ public final class StringUtil {
 		}
 		return "";
 	}
-	
+
 	static private char[] char_digit_set = { '2', '3', '4', '5', '6', '7', '8', '9', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'z', 'x', 'c', 'v', 'b', 'n', 'm' };
+
 	public static String getRandomString(final int size) {
 		Random random = new Random();
 		StringBuffer buffer = new StringBuffer();
@@ -320,6 +322,7 @@ public final class StringUtil {
 	}
 
 	static private char[] char_set = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
 	public static String getRandomNumber(final int size) {
 		Random random = new Random();
 		StringBuffer buffer = new StringBuffer();
@@ -422,7 +425,7 @@ public final class StringUtil {
 		if (s.contains("&rdquo;")) {
 			s = s.replaceAll("&rdquo;", "\"");
 		}
-		if(s.contains("&quot;")) {
+		if (s.contains("&quot;")) {
 			s = s.replaceAll("&quot;", "\"");
 		}
 		if (s.contains("&nbsp;")) {
@@ -509,24 +512,26 @@ public final class StringUtil {
 		}
 		return ip;
 	}
-	
+
 	public static String getRequestXForwardedIps(HttpServletRequest request) {
 		return getRequestXForwardedIps(request, DEFAULT_XFORWARDED_IP_LIMIT);
 	}
-	
+
 	/**
 	 * 获取完整的反向代理ip列表
-	 * @param limit 返回结果的最大长度限制
+	 * 
+	 * @param limit
+	 *            返回结果的最大长度限制
 	 */
 	public static String getRequestXForwardedIps(HttpServletRequest request, int limit) {
-		if(request == null) {
+		if (request == null) {
 			return null;
 		}
 		String xForwardedIps = request.getHeader("X-Forwarded-For");
-		if(StringUtil.isNull(xForwardedIps)) {
+		if (StringUtil.isNull(xForwardedIps)) {
 			return null;
 		}
-		if(limit > 0 && xForwardedIps.length() >= limit) {
+		if (limit > 0 && xForwardedIps.length() >= limit) {
 			xForwardedIps = xForwardedIps.substring(0, limit);
 		}
 		return xForwardedIps;
@@ -539,7 +544,7 @@ public final class StringUtil {
 		}
 		return reqeustLink;
 	}
-	
+
 	/**
 	 * 获取一级域名
 	 * 
@@ -599,22 +604,174 @@ public final class StringUtil {
 
 	}
 
+	public static String html2Text(String inputString) {
+		String htmlStr = inputString; // 含html标签的字符串
+		String textStr = "";
+		java.util.regex.Pattern p_script;
+		java.util.regex.Matcher m_script;
+		java.util.regex.Pattern p_style;
+		java.util.regex.Matcher m_style;
+		
+		java.util.regex.Pattern p_WordDocument;
+		java.util.regex.Matcher m_WordDocument;
+		
+		java.util.regex.Pattern p_html;
+		java.util.regex.Matcher m_html;
+
+		try {
+			String regEx_script = "<[\\s]*?script[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?script[\\s]*?>"; // 定义script的正则表达式{或<script[^>]*?>[\\s\\S]*?<\\/script>
+																										// }
+			String regEx_style = "<[\\s]*?style[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?style[\\s]*?>"; // 定义style的正则表达式{或<style[^>]*?>[\\s\\S]*?<\\/style>
+			
+			String regEx_WordDocument = "<[\\s]*?w:WordDocument[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?w:WordDocument[\\s]*?>"; // 定义style的正则表达式{或<w:WordDocument[^>]*?>[\\s\\S]*?<\\/w:WordDocument>
+																									// }
+			String regEx_html = "<[^>]+>"; // 定义HTML标签的正则表达式
+
+			p_script = Pattern.compile(regEx_script, Pattern.CASE_INSENSITIVE);
+			m_script = p_script.matcher(htmlStr);
+			htmlStr = m_script.replaceAll(""); // 过滤script标签
+
+			p_style = Pattern.compile(regEx_style, Pattern.CASE_INSENSITIVE);
+			m_style = p_style.matcher(htmlStr);
+			htmlStr = m_style.replaceAll(""); // 过滤style标签
+			
+			p_WordDocument = Pattern.compile(regEx_WordDocument, Pattern.CASE_INSENSITIVE);
+			m_WordDocument = p_WordDocument.matcher(htmlStr);
+			htmlStr = m_WordDocument.replaceAll(""); // 过滤w:WordDocument标签
+
+			p_html = Pattern.compile(regEx_html, Pattern.CASE_INSENSITIVE);
+			m_html = p_html.matcher(htmlStr);
+			htmlStr = m_html.replaceAll(""); // 过滤html标签
+
+			textStr = htmlStr;
+
+		} catch (Exception e) {
+			System.err.println("Html2Text: " + e.getMessage());
+		}
+
+		return textStr;// 返回文本字符串
+	}
+	
+	public static String filterWordFormatAndSomeHTML (String inputString) {
+		String htmlStr = inputString; // 含html标签的字符串
+		String textStr = "";
+		
+		java.util.regex.Pattern pattern;
+		java.util.regex.Matcher matcher;
+		
+		
+//		java.util.regex.Pattern p_script;
+//		java.util.regex.Matcher m_script;
+//		java.util.regex.Pattern p_style;
+//		java.util.regex.Matcher m_style;
+//		
+//		java.util.regex.Pattern p_WordDocument;
+//		java.util.regex.Matcher m_WordDocument;
+//		
+//		java.util.regex.Pattern p_html;
+//		java.util.regex.Matcher m_html;
+//		
+//		java.util.regex.Pattern p_instyle;
+//		java.util.regex.Matcher m_instyle;
+//		
+//		java.util.regex.Pattern p_inclass;
+//		java.util.regex.Matcher m_inclass;
+
+		try {
+			String regEx_script = "<[\\s]*?script[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?script[\\s]*?>"; // 定义script的正则表达式{或<script[^>]*?>[\\s\\S]*?<\\/script>
+																										// }
+			String regEx_style = "<[\\s]*?style[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?style[\\s]*?>"; // 定义style的正则表达式{或<style[^>]*?>[\\s\\S]*?<\\/style>
+			
+			String regEx_WordDocument = "<[\\s]*?w:WordDocument[^>]*?>[\\s\\S]*?<[\\s]*?\\/[\\s]*?w:WordDocument[\\s]*?>"; // 定义style的正则表达式{或<w:WordDocument[^>]*?>[\\s\\S]*?<\\/w:WordDocument>
+																									// }
+			String regEx_html = "<!--[\\s\\S]*?-->"; // 过滤注释<!-- -->
+			
+			String regEx_instyle = "style=\"[\\s\\S]*?\""; //过滤style
+			
+			String regEx_inclass = "class=\"[\\s\\S]*?\""; //过滤class
+			
+			String regEx_lang = "lang=\"[\\s\\S]*?\""; //过滤lang
+			
+			String regEx_sub_start = "<sub>"; //过滤sub
+			String regEx_sub_end = "</sub>"; //过滤sub
+			
+			String regEx_sup_start = "<sup>"; //过滤sup
+			String regEx_sup_end = "</sup>"; //过滤sup
+			
+			String regEx_aname_end = "<a[\\s\\S]*?name=[^>]*?>"; //a name , not a href
+
+			pattern = Pattern.compile(regEx_script, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤script标签
+
+			pattern = Pattern.compile(regEx_style, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤style标签
+			
+			pattern = Pattern.compile(regEx_WordDocument, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤w:WordDocument标签
+
+			pattern = Pattern.compile(regEx_html, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤注释
+			
+			pattern = Pattern.compile(regEx_instyle, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤style
+			
+			pattern = Pattern.compile(regEx_inclass, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤class
+			
+			pattern = Pattern.compile(regEx_lang, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤lang
+			
+			pattern = Pattern.compile(regEx_sub_start, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤sub
+			
+			pattern = Pattern.compile(regEx_sub_end, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤sub
+			
+			pattern = Pattern.compile(regEx_sup_start, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤sup
+			
+			pattern = Pattern.compile(regEx_sup_end, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // 过滤sup
+
+			pattern = Pattern.compile(regEx_aname_end, Pattern.CASE_INSENSITIVE);
+			matcher = pattern.matcher(htmlStr);
+			htmlStr = matcher.replaceAll(""); // //a name , not a href
+			
+			textStr = htmlStr.replaceAll("<(?!(img|table|/table|tr|/tr|td|/td|p|/p|br|a|/a|b|/b|i|/i|u|/u|strike|/strike|h1|/h1|h2|/h2|h3|/h3|hr))[^>]*>","");
+
+		} catch (Exception e) {
+			System.err.println("Html2Text: " + e.getMessage());
+		}
+
+		return textStr;// 返回文本字符串
+	}
+
 	/**
+	 * 获得指定长度toLength的子字符串(toLength小于等于0时不截取字符串)，然后将其中影响html格式的字符转义
 	 * 
-	  * 获得指定长度toLength的子字符串(toLength小于等于0时不截取字符串)，然后将其中影响html格式的字符转义
-	  *
-	  * @autor: hyx  May 2, 2013 4:28:52 PM
-	  * @param originalStr
-	  * @param toLength
-	  * @return    
-	  * @return String
+	 * @autor: hyx May 2, 2013 4:28:52 PM
+	 * @param originalStr
+	 * @param toLength
+	 * @return
+	 * @return String
 	 */
 	public static String subStringAndTransferSpecialCharacter(String originalStr, int toLength) {
 		if (isNull(originalStr)) {
 			return "";
-		}else if(toLength<=0) {
+		} else if (toLength <= 0) {
 			;
-		}else if (toLength>0 && originalStr.length() > toLength) {
+		} else if (toLength > 0 && originalStr.length() > toLength) {
 			originalStr = originalStr.substring(0, toLength - 1) + "…";
 		}
 		return escapeSpecialHTMLchar(originalStr);
@@ -762,7 +919,7 @@ public final class StringUtil {
 				}
 				newString = newString.substring(0, newString.length() - 1);
 				return newString;
-			} else 
+			} else
 				return "";
 		} else
 			return null;
@@ -785,7 +942,6 @@ public final class StringUtil {
 		} else
 			return false;
 	}
-
 
 	/**
 	 * 过滤字符串中的\r\n
@@ -964,7 +1120,7 @@ public final class StringUtil {
 		s = m.replaceAll("");
 		return s;
 	}
-	
+
 	public static String removeAllTag(String s) {
 		Pattern p = Pattern.compile("<([^>]*)>", Pattern.CASE_INSENSITIVE);
 		Matcher m = p.matcher(s);
@@ -979,13 +1135,13 @@ public final class StringUtil {
 	 * @return
 	 */
 	public static String escapeSpecialHTMLchar(String str) {
-		str = str.replaceAll("<br/>|<br>", "\n"); //保存回车
+		str = str.replaceAll("<br/>|<br>", "\n"); // 保存回车
 		str = str.replaceAll("&", "&amp;");
 		str = str.replaceAll("\"", "&quot;");
 		str = str.replaceAll("<", "&lt;");
 		str = str.replaceAll(">", "&gt;");
-		str = str.replaceAll(" ", "&nbsp;"); //保存空格
-		str = str.replaceAll("\n", "<br/>"); //保存回车
+		str = str.replaceAll(" ", "&nbsp;"); // 保存空格
+		str = str.replaceAll("\n", "<br/>"); // 保存回车
 		return str;
 	}
 
@@ -1000,10 +1156,10 @@ public final class StringUtil {
 		str = str.replaceAll("\"", "&quot;");
 		str = str.replaceAll("<", "&lt;");
 		str = str.replaceAll(">", "&gt;");
-		str = str.replaceAll("\n", "<br/>"); //保存回车
+		str = str.replaceAll("\n", "<br/>"); // 保存回车
 		return str;
 	}
-	
+
 	/**
 	 * 把html表示的"&amp;"、"&quot;"、"&lt;"、"&gt;"转化成&、"、<、>
 	 * 
@@ -1084,8 +1240,8 @@ public final class StringUtil {
 	 * </p>
 	 * <p>
 	 * If <code>len</code> characters are not available, or the String is
-	 * <code>null</code>, the String will be returned without an an
-	 * exception. An exception is thrown if len is negative.
+	 * <code>null</code>, the String will be returned without an an exception.
+	 * An exception is thrown if len is negative.
 	 * </p>
 	 * 
 	 * <pre>
@@ -1101,8 +1257,7 @@ public final class StringUtil {
 	 *            the String to get the rightmost characters from, may be null
 	 * @param len
 	 *            the length of the required String, must be zero or positive
-	 * @return the rightmost characters, <code>null</code> if null String
-	 *         input
+	 * @return the rightmost characters, <code>null</code> if null String input
 	 */
 	public static String right(String str, int len) {
 		if (str == null) {
@@ -1207,7 +1362,8 @@ public final class StringUtil {
 	 */
 	private static final boolean isChinese(char c) {
 		Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
-		if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION || ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {
+		if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION
+				|| ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS) {
 			return true;
 		}
 		return false;
@@ -1252,20 +1408,21 @@ public final class StringUtil {
 		}
 		return buffer.toString();
 	}
-	
+
 	/**
 	 * 过滤字符串中非中英文字符
+	 * 
 	 * @param target
 	 * @return
 	 */
-	public static String filterNonEngAndChn(String target){
-		if(target == null || target.equals("")){
+	public static String filterNonEngAndChn(String target) {
+		if (target == null || target.equals("")) {
 			return "";
 		}
 		target = transferSpecialCharacter(target);
 		return target.replaceAll("[^a-zA-Z\u4E00-\u9FA5]", "");
 	}
-	
+
 	/**
 	 * 对能改变html结构的字符（&、"、<、>）做转义
 	 * 
@@ -1273,18 +1430,18 @@ public final class StringUtil {
 	 * @return
 	 */
 	public static String escapeSpecialHTMLcharForClassEdit(String str) {
-		if(str!=null){
-			str = str.replaceAll("<br>|<br/>", "\n"); //保存回车
+		if (str != null) {
+			str = str.replaceAll("<br>|<br/>", "\n"); // 保存回车
 			str = str.replaceAll("&", "&amp;");
 			str = str.replaceAll("\"", "&quot;");
 			str = str.replaceAll("<", "&lt;");
 			str = str.replaceAll(">", "&gt;");
-			str = str.replaceAll(" ", "&nbsp;"); //保存空格
-			str=str.replaceAll("/", "&frasl;"); 
+			str = str.replaceAll(" ", "&nbsp;"); // 保存空格
+			str = str.replaceAll("/", "&frasl;");
 		}
 		return str;
 	}
-	
+
 	public static String getDirectoryName(String filePath) {
 		if (isNull(filePath)) {
 			return "";
@@ -1302,7 +1459,7 @@ public final class StringUtil {
 		}
 		return filePath;
 	}
-	
+
 	public static String getShortFileName(String fileName) {
 		if (!isNull(fileName)) {
 			String oldFileName = new String(fileName);
@@ -1323,6 +1480,12 @@ public final class StringUtil {
 			return fileName;
 		}
 		return "";
+	}
+	
+	public static void main(String[] args) {
+		String test = "234<strong>324</strong>324<em>32<p>pppp</p><span>ssspppaaannn</span><a href=\"#\">4te</a>st1</em>2<img src=\"test.jpg\" />3<table border=\"1\"><tr><td>asdf</td></tr><tr><td>bbbb</td></tr></table>";
+		System.out.println(test);
+	    System.out.println(test.replaceAll("<(?!(img|table|/table|tr|/tr|td|/td|p|/p|span|/span))[^>]*>",""));
 	}
 
 }

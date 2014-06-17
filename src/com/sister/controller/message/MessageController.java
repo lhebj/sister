@@ -43,11 +43,11 @@ public class MessageController {
 			msg.setDateCreateMsg(new Date());
 			msg.setIpMsg(StringUtil.getRequestIp(request));
 			messageService.saveOrUpdateMessage(msg);
-			this.sendEmail(msg);
+//			this.sendEmail(msg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/contactus.do";
+		return "redirect:/contact.do";
 	}
 	
 	private void sendEmail(Message msg){

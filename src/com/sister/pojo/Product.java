@@ -35,6 +35,7 @@ public class Product implements java.io.Serializable {
 	private String namePrd;
 	private Brand brand;
 	private String infoPrd;
+	private String infoEnPrd;
 	private Content logoPrd;
 	private Date dateCreatePrd;
 
@@ -45,11 +46,12 @@ public class Product implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Product(Long idPrd, String namePrd, Brand brand, String infoPrd, Content logoPrd, Date dateCreatePrd) {
+	public Product(Long idPrd, String namePrd, Brand brand, String infoPrd, String infoEnPrd,Content logoPrd, Date dateCreatePrd) {
 		this.idPrd = idPrd;
 		this.namePrd = namePrd;
 		this.brand = brand;
 		this.infoPrd = infoPrd;
+		this.infoEnPrd = infoEnPrd;
 		this.logoPrd = logoPrd;
 		this.dateCreatePrd = dateCreatePrd;
 	}
@@ -86,13 +88,22 @@ public class Product implements java.io.Serializable {
 		this.brand = brand;
 	}
 
-	@Column(name = "info_prd", length = 128)
+	@Column(name = "info_prd", length = 65535)
 	public String getInfoPrd() {
 		return this.infoPrd;
 	}
 
 	public void setInfoPrd(String infoPrd) {
 		this.infoPrd = infoPrd;
+	}
+
+	@Column(name = "info_en_prd", length = 65535)
+	public String getInfoEnPrd() {
+		return infoEnPrd;
+	}
+
+	public void setInfoEnPrd(String infoEnPrd) {
+		this.infoEnPrd = infoEnPrd;
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -118,6 +129,7 @@ public class Product implements java.io.Serializable {
 		ProductDTO dto = new ProductDTO();
 		dto.setIdPrd(idPrd);
 		dto.setInfoPrd(infoPrd);
+		dto.setInfoEnPrd(infoEnPrd);
 		dto.setNamePrd(namePrd);
 		if(getLogoPrd() != null){
 			dto.setLogoNamePrd(getLogoPrd().getFilenameCon());

@@ -16,6 +16,7 @@ import com.sister.web.util.JSONHelperUtil;
 import com.sister.web.util.LocalizationUtil;
 import com.sister.web.util.LogUtil;
 import com.sister.web.util.ParamUtils;
+import com.sister.web.util.StringUtil;
 import com.sister.web.util.WebUtil;
 
 @Controller
@@ -28,6 +29,7 @@ public class AboutAdminControll {
 	@RequestMapping(params = "action=save")
 	public String save(HttpServletRequest request, HttpServletResponse response) {
 		String contentAb = ParamUtils.getParameter(request, "contentAb");
+		String contentEnAb = ParamUtils.getParameter(request, "contentEnAb");
 		String typeAb = ParamUtils.getParameter(request, "typeAb");
 
 		try {
@@ -38,7 +40,8 @@ public class AboutAdminControll {
 			if (about == null) {
 				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
 			}
-			about.setContentAb(contentAb);
+			about.setContentAb(StringUtil.filterWordFormatAndSomeHTML(contentAb));
+			about.setContentEnAb(StringUtil.filterWordFormatAndSomeHTML(contentEnAb));
 			about.setTypeAb(typeAb);
 			about.setDateCreateAb(new Date());
 			aboutService.saveOrUpdateAbout(about);
@@ -50,7 +53,10 @@ public class AboutAdminControll {
 		}
 		if(typeAb.equals(About.TYPE_ABOUT)){
 			return "redirect:/admin.do?action=manageAbout";
+		}else if(typeAb.equals(About.TYPE_NEWS)){
+			return "redirect:/admin.do?action=manageNews";
+		}else{
+			return "redirect:/admin.do?action=manageContact";
 		}
-		return "redirect:/admin.do?action=manageContact";
 	}
 }

@@ -37,7 +37,10 @@
 		<thread>
 		<tr>
 			<td >产品名</td>
+			<td >产品信息</td>
+			<td >产品信息（英文）</td>
 			<td >logo</td>
+			<td >发布时间</td>
 			<td >操作</td>
 		</tr>
 		</thread>
@@ -45,8 +48,11 @@
 			<c:forEach items="${productDTOList}" var="productDTO">
 				<tr>
 					<td><a href="brand.do?action=detail&pId=${productDTO.idPrd}">${productDTO.namePrd}</a></td>
+					<td>${productDTO.infoPrd}</td>
+					<td>${productDTO.infoEnPrd}</td>
 					<td><a href="brand.do?action=detail&pId=${productDTO.idPrd}"><img
 							src="${productDTO.logoPathPrd}"></img></a></td>
+					<td>${productDTO.dateCreatePrd}</td>
 					<td><a
 						href="admin.do?action=postProduct&id=${productDTO.idPrd}"><button
 								style="width: 82px;" class="btn btn-primary" type="button">编辑</button></a>

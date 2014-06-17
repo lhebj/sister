@@ -56,7 +56,9 @@ create table sister_brand_brd
 );
 
 alter table sister_brand_brd comment '品牌';
-
+INSERT INTO sister_brand_brd VALUES(1, "钻石项链", 1, 1); 
+INSERT INTO sister_brand_brd VALUES(2, "手链", 2, 1);
+INSERT INTO sister_brand_brd VALUES(3, "宝石", 3, 1);  
 /*==============================================================*/
 /* Table: sister_content_con                                    */
 /*==============================================================*/
@@ -76,6 +78,52 @@ create table sister_content_con
 
 alter table sister_content_con comment '文件存储表';
 
+insert into sister_content_con values (1,'brand-1.png','brand-1.png','667648','png','utf-8','brand/2014-02-01/brand-1.png','2014-02-01 15:12:00','brand');
+insert into sister_content_con values (2,'brand-2.png','brand-2.png','667648','png','utf-8','brand/2014-02-01/brand-2.png','2014-02-01 15:12:00','brand');
+insert into sister_content_con values (3,'brand-3.png','brand-3.png','667648','png','utf-8','brand/2014-02-01/brand-3.png','2014-02-01 15:12:00','brand');
+insert into sister_content_con values (4,'brand-4.png','brand-4.png','667648','png','utf-8','brand/2014-02-01/brand-4.png','2014-02-01 15:12:00','brand');
+
+insert into sister_content_con values (5,'b1p1-logo.png','b1p1-logo.png','667648','png','utf-8','brand/2014-02-01/b1p1-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (6,'b1p1-1.png','b1p1-1.png','667648','png','utf-8','product/2014-02-01/b1p1-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (7,'b1p1-2.png','b1p1-2.png','667648','png','utf-8','product/2014-02-01/b1p1-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (8,'b1p1-3.png','b1p1-3.png','667648','png','utf-8','product/2014-02-01/b1p1-3.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (9,'b1p1-4.png','b1p1-4.png','667648','png','utf-8','product/2014-02-01/b1p1-4.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (10,'b1p1-5.png','b1p1-5.png','667648','png','utf-8','product/2014-02-01/b1p1-5.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (11,'b1p2-logo.png','b1p2-logo.png','667648','png','utf-8','brand/2014-02-01/b1p2-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (12,'b1p2-1.png','b1p2-1.png','667648','png','utf-8','product/2014-02-01/b1p2-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (13,'b1p2-2.png','b1p2-2.png','667648','png','utf-8','product/2014-02-01/b1p2-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (14,'b1p2-3.png','b1p2-3.png','667648','png','utf-8','product/2014-02-01/b1p2-3.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (15,'b1p3-logo.png','b1p3-logo.png','667648','png','utf-8','brand/2014-02-01/b1p3-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (16,'b1p3-1.png','b1p3-1.png','667648','png','utf-8','product/2014-02-01/b1p3-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (17,'b1p3-2.png','b1p3-2.png','667648','png','utf-8','product/2014-02-01/b1p3-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (18,'b1p3-3.png','b1p3-3.png','667648','png','utf-8','product/2014-02-01/b1p3-3.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (19,'b1p4-logo.png','b1p4-logo.png','667648','png','utf-8','brand/2014-02-01/b1p4-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (20,'b1p4-1.png','b1p4-1.png','667648','png','utf-8','product/2014-02-01/b1p4-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (21,'b1p4-2.png','b1p4-2.png','667648','png','utf-8','product/2014-02-01/b1p4-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (22,'b1p4-3.png','b1p4-3.png','667648','png','utf-8','product/2014-02-01/b1p4-3.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (23,'b1p4-4.png','b1p4-4.png','667648','png','utf-8','product/2014-02-01/b1p4-4.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (24,'b1p4-5.png','b1p4-5.png','667648','png','utf-8','product/2014-02-01/b1p4-5.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (25,'b1p5-logo.png','b1p5-logo.png','667648','png','utf-8','brand/2014-02-01/b1p5-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (26,'b1p5-1.png','b1p5-1.png','667648','png','utf-8','product/2014-02-01/b1p5-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (27,'b1p5-2.png','b1p5-2.png','667648','png','utf-8','product/2014-02-01/b1p5-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (28,'b1p5-3.png','b1p5-3.png','667648','png','utf-8','product/2014-02-01/b1p5-3.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (29,'b1p5-4.png','b1p5-4.png','667648','png','utf-8','product/2014-02-01/b1p5-4.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (30,'b1p5-5.png','b1p5-5.png','667648','png','utf-8','product/2014-02-01/b1p5-5.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (31,'b1p6-logo.png','b1p6-logo.png','667648','png','utf-8','brand/2014-02-01/b1p6-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (32,'b1p6-1.png','b1p6-1.png','667648','png','utf-8','product/2014-02-01/b1p6-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (33,'b1p6-2.png','b1p6-2.png','667648','png','utf-8','product/2014-02-01/b1p6-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (34,'b1p6-3.png','b1p6-3.png','667648','png','utf-8','product/2014-02-01/b1p6-3.png','2014-02-01 15:12:00','product');
+
+insert into sister_content_con values (35,'b1p7-logo.png','b1p7-logo.png','667648','png','utf-8','brand/2014-02-01/b1p7-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (36,'b1p7-1.png','b1p7-1.png','667648','png','utf-8','product/2014-02-01/b1p7-1.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (37,'b1p7-2.png','b1p7-2.png','667648','png','utf-8','product/2014-02-01/b1p7-2.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (38,'b1p7-3.png','b1p7-3.png','667648','png','utf-8','product/2014-02-01/b1p7-3.png','2014-02-01 15:12:00','product');
+
 /*==============================================================*/
 /* Table: sister_product_pic_prdp                                */
 /*==============================================================*/
@@ -83,14 +131,47 @@ create table sister_product_pic_prdp
 (
    id_prdp               bigint NOT NULL AUTO_INCREMENT,
    id_prd_prdp           bigint,
-   info_prdp             varchar(256) comment '产品图片描述',
+   info_prdp             text comment '产品图片描述',
+   info_en_prdp          text comment '英文产品图片描述',
    id_pic_prdp           bigint comment '产品图片',
    date_create_prdp      datetime comment '创建时间',
    primary key (id_prdp)
 );
 
 alter table sister_product_pic_prdp comment '产品图片';
+INSERT INTO sister_product_pic_prdp VALUES(1, 1, "", "",6, "2014-02-01 15:12:00");
+INSERT INTO sister_product_pic_prdp VALUES(2, 1, "", "",7, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(3, 1, "", "",8, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(4, 1, "", "",9, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(5, 1, "", "",10, "2014-02-01 15:12:00");  
 
+INSERT INTO sister_product_pic_prdp VALUES(6, 2, "", "",12, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(7, 2, "", "",13, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(8, 2, "", "",14, "2014-02-01 15:12:00"); 
+
+INSERT INTO sister_product_pic_prdp VALUES(9, 3, "", "",16, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(10, 3, "", "",17, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(11, 3, "", "",18, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(12, 4, "", "",20, "2014-02-01 15:12:00");
+INSERT INTO sister_product_pic_prdp VALUES(13, 4, "", "",21, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(14, 4, "", "",22, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(15, 4, "", "",23, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(16, 4, "", "",24, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(17, 5, "", "",26, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(18, 5, "", "",27, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(19, 5, "", "",28, "2014-02-01 15:12:00");
+INSERT INTO sister_product_pic_prdp VALUES(20, 5, "", "",29, "2014-02-01 15:12:00");
+INSERT INTO sister_product_pic_prdp VALUES(21, 5, "", "",30, "2014-02-01 15:12:00"); 
+
+INSERT INTO sister_product_pic_prdp VALUES(22, 6, "", "",31, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(23, 6, "", "",32, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(24, 6, "", "",33, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(25, 7, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(26, 7, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(27, 7, "", "",36, "2014-02-01 15:12:00");
 /*==============================================================*/
 /* Table: sister_product_prd                                    */
 /*==============================================================*/
@@ -99,14 +180,21 @@ create table sister_product_prd
    id_prd               bigint NOT NULL AUTO_INCREMENT,
    name_prd             varchar(256),
    id_brd_prd           bigint,
-   info_prd             varchar(8192) comment '产品描述',
-   id_logo_prd           bigint comment '产品图片',
+   info_prd             text comment '产品描述',
+   info_en_prd          text comment '英文产品描述',
+   id_logo_prd          bigint comment '产品图片',
    date_create_prd      datetime comment '创建时间',
    primary key (id_prd)
 );
 
 alter table sister_product_prd comment '产品';
-
+INSERT INTO sister_product_prd VALUES(1, "钻石项链-a", 1, "", "", 5, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(2, "钻石项链-a", 1, "", "",11, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(3, "钻石项链-a", 1, "", "",15, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(4, "钻石项链-a", 1, "", "",19, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(5, "钻石项链-a", 1, "", "",25, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(6, "钻石项链-a", 1, "", "",31, "2014-02-01 15:12:00");
+INSERT INTO sister_product_prd VALUES(7, "钻石项链-a", 1, "", "",35, "2014-02-01 15:12:00");  
 /*==============================================================*/
 /* Table: sister_user_authority_uaut                            */
 /*==============================================================*/
@@ -155,13 +243,14 @@ create table sister_about_ab
    id_ab               bigint NOT NULL AUTO_INCREMENT,
    type_ab			   enum('about','contact','news'),
    content_ab          text,
+   content_en_ab          text,
    date_create_ab      datetime,
    PRIMARY KEY(id_ab)
 );
 
-insert into sister_about_ab values (1,'about','关于我们，介绍','2014-04-12 10:00:00');
-insert into sister_about_ab values (2,'contact','<p>工作时间</p><p>周一至周五</p><p>9:00~18:00</p><p>电话</p><p>010-66668888</p><p>传真</p><p>010-66668888</p><p>邮件</p><p>info@handz.com.cn</p>','2014-04-12 10:00:00');
-insert into sister_about_ab values (3,'news','<p>工作时间</p><p>周一至周五</p><p>9:00~18:00</p><p>电话</p><p>010-66668888</p><p>传真</p><p>010-66668888</p><p>邮件</p><p>info@handz.com.cn</p>','2014-04-12 10:00:00');
+insert into sister_about_ab values (1,'about','关于我们，介绍','about us','2014-04-12 10:00:00');
+insert into sister_about_ab values (2,'contact','<p>工作时间</p><p>周一至周五</p><p>9:00~18:00</p><p>电话</p><p>010-66668888</p><p>传真</p><p>010-66668888</p><p>邮件</p><p>info@handz.com.cn</p>','contact','2014-04-12 10:00:00');
+insert into sister_about_ab values (3,'news','珍珠是一种古老的有机宝石','newss','2014-04-12 10:00:00');
 
 alter table sister_about_ab comment '关于';
 

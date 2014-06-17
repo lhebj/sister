@@ -38,7 +38,13 @@
 		style="width: 100%;">
 		<tbody>
 			<tr>
+				<td>中文</td>
 				<td>${about.contentAb}</td>
+			</tr>
+			
+			<tr>
+				<td>英文</td>
+				<td>${about.contentEnAb}</td>
 			</tr>
 		</tbody>
 	</table>

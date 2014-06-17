@@ -27,6 +27,7 @@ public class About implements java.io.Serializable {
 	private Long idAb;
 	private String typeAb;
 	private String contentAb;
+	private String contentEnAb;
 	private Date dateCreateAb;
 
 	// Constructors
@@ -36,10 +37,11 @@ public class About implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public About(Long idAb, String typeAb, String contentAb, Date dateCreateAb) {
+	public About(Long idAb, String typeAb, String contentAb,String contentEnAb, Date dateCreateAb) {
 		this.idAb = idAb;
 		this.typeAb = typeAb;
 		this.contentAb = contentAb;
+		this.contentEnAb = contentEnAb; 
 		this.dateCreateAb = dateCreateAb;
 	}
 
@@ -72,6 +74,15 @@ public class About implements java.io.Serializable {
 
 	public void setContentAb(String contentAb) {
 		this.contentAb = contentAb;
+	}
+
+	@Column(name = "content_en_ab", length = 65535)
+	public String getContentEnAb() {
+		return contentEnAb;
+	}
+
+	public void setContentEnAb(String contentEnAb) {
+		this.contentEnAb = contentEnAb;
 	}
 
 	@Column(name = "date_create_ab", length = 19)

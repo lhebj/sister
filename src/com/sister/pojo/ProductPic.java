@@ -71,7 +71,7 @@ public class ProductPic implements java.io.Serializable {
 		this.product = product;
 	}
 
-	@Column(name = "info_prdp", length = 256)
+	@Column(name = "info_prdp", length = 65535)
 	public String getInfoPrdp() {
 		return infoPrdp;
 	}
@@ -101,6 +101,7 @@ public class ProductPic implements java.io.Serializable {
 	
 	public ProductPicDTO toDTO(){
 		ProductPicDTO dto = new ProductPicDTO();
+		dto.setIdPrdp(idPrdp);
 		dto.setInfoPrdp(infoPrdp);
 		if(picPrdp != null){
 			dto.setPicNamePrdp(getPicPrdp().getFilenameCon());
