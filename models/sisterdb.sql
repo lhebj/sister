@@ -124,6 +124,11 @@ insert into sister_content_con values (36,'b1p7-1.png','b1p7-1.png','667648','pn
 insert into sister_content_con values (37,'b1p7-2.png','b1p7-2.png','667648','png','utf-8','product/2014-02-01/b1p7-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (38,'b1p7-3.png','b1p7-3.png','667648','png','utf-8','product/2014-02-01/b1p7-3.png','2014-02-01 15:12:00','product');
 
+insert into sister_content_con values (39,'about.jpg','about.jpg','667648','jpg','utf-8','about/2014-02-01/about.jpg','2014-02-01 15:12:00','about');
+insert into sister_content_con values (40,'news.jpg','news.jpg','667648','jpg','utf-8','news/2014-02-01/news.jpg','2014-02-01 15:12:00','news');
+insert into sister_content_con values (41,'contact.jpg','contact.jpg','667648','jpg','utf-8','contact/2014-02-01/contact.jpg','2014-02-01 15:12:00','contact');
+
+
 /*==============================================================*/
 /* Table: sister_product_pic_prdp                                */
 /*==============================================================*/
@@ -242,15 +247,16 @@ create table sister_about_ab
 (
    id_ab               bigint NOT NULL AUTO_INCREMENT,
    type_ab			   enum('about','contact','news'),
+   id_pic_ab          bigint comment '图片',
    content_ab          text,
-   content_en_ab          text,
+   content_en_ab       text,   
    date_create_ab      datetime,
    PRIMARY KEY(id_ab)
 );
 
-insert into sister_about_ab values (1,'about','关于我们，介绍','about us','2014-04-12 10:00:00');
-insert into sister_about_ab values (2,'contact','<p>工作时间</p><p>周一至周五</p><p>9:00~18:00</p><p>电话</p><p>010-66668888</p><p>传真</p><p>010-66668888</p><p>邮件</p><p>info@handz.com.cn</p>','contact','2014-04-12 10:00:00');
-insert into sister_about_ab values (3,'news','珍珠是一种古老的有机宝石','newss','2014-04-12 10:00:00');
+insert into sister_about_ab values (1,'about',39,'珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。根据地质学和考古学的研究证明，在两亿年前，地球上就已经有了珍珠。国际宝石界还将珍珠列为六月生辰的幸运石，结婚十三周年和三十周年的纪念石。具有瑰丽色彩和高雅气质的珍珠，象征着健康、纯洁、富有和幸福，自古以来为人们所喜爱。2006年一场台风被命名为“珍珠”。','Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes. Most peals are composed and rung in compliance with the decisions of the Central Council of Church Bell Ringers, allowing them to be recorded in that organisation’s peal records. Many peals are also recorded on peal boards attached to the walls of the ringing rooms in the towers where they took place, and in the peal books of local change-ringing associations.','2014-04-12 10:00:00');
+insert into sister_about_ab values (2,'contact',41,'<p>工作时间</p><p>周一至周五</p><p>9:00~18:00</p><p>电话</p><p>010-66668888</p><p>传真</p><p>010-66668888</p><p>邮件</p><p>info@handz.com.cn</p>','contact','2014-04-12 10:00:00');
+insert into sister_about_ab values (3,'news',40,'珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。根据地质学和考古学的研究证明，在两亿年前，地球上就已经有了珍珠。国际宝石界还将珍珠列为六月生辰的幸运石，结婚十三周年和三十周年的纪念石。具有瑰丽色彩和高雅气质的珍珠，象征着健康、纯洁、富有和幸福，自古以来为人们所喜爱。2006年一场台风被命名为“珍珠”。','Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes. Most peals are composed and rung in compliance with the decisions of the Central Council of Church Bell Ringers, allowing them to be recorded in that organisation’s peal records. Many peals are also recorded on peal boards attached to the walls of the ringing rooms in the towers where they took place, and in the peal books of local change-ringing associations.','2014-04-12 10:00:00');
 
 alter table sister_about_ab comment '关于';
 

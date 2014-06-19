@@ -11,18 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.sister.pojo.About;
 import com.sister.service.about.IAboutService;
 
+
 @Controller
 @RequestMapping("/")
-public class AboutController {
+public class NewsController {
 	@Resource(name = "aboutService")
 	private IAboutService aboutService;
 	
-	@RequestMapping("/about.do")
+	@RequestMapping("/news.do")
 	public String index(HttpServletRequest request, HttpServletResponse response, Model model) {
-		About about = aboutService.findAboutByType(About.TYPE_ABOUT);
+		About about = aboutService.findAboutByType(About.TYPE_NEWS);
 		if(about != null){
-			model.addAttribute("about", about.toDTO());
+			model.addAttribute("news", about.toDTO());
 		}
-		return "about";
+		return "news";
 	}
 }

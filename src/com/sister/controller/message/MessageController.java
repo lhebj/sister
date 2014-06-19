@@ -1,6 +1,5 @@
 package com.sister.controller.message;
 
-import java.net.URLEncoder;
 import java.util.Date;
 
 import javax.annotation.Resource;
@@ -14,11 +13,13 @@ import com.sister.messagefactory.MailBody;
 import com.sister.pojo.Message;
 import com.sister.service.message.IMessageService;
 import com.sister.web.util.DateUtil;
-import com.sister.web.util.LocalizationUtil;
+import com.sister.web.util.JSONHelperUtil;
+import com.sister.web.util.LogUtil;
 import com.sister.web.util.MailSenderUtil;
 import com.sister.web.util.ParamUtils;
 import com.sister.web.util.SisterConfig;
 import com.sister.web.util.StringUtil;
+import com.sister.web.util.WebUtil;
 
 @Controller
 @RequestMapping("/message.do")
@@ -35,7 +36,8 @@ public class MessageController {
 		try {
 
 			if (message == null) {
-				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+				JSONHelperUtil.outputOperationResultAsJSON(Boolean.FALSE, "Parameter.error", response);
+				return null;
 			}
 
 			Message msg = new Message();
@@ -43,11 +45,13 @@ public class MessageController {
 			msg.setDateCreateMsg(new Date());
 			msg.setIpMsg(StringUtil.getRequestIp(request));
 			messageService.saveOrUpdateMessage(msg);
+			LogUtil.log.info(StringUtil.getRequestIp(request) + ", " + WebUtil.getUserId(request) + " saves msg id " + msg.getMessageMsg());
 //			this.sendEmail(msg);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "redirect:/contact.do";
+		JSONHelperUtil.outputOperationResultAsJSON(Boolean.TRUE, "success", response);
+		return null;
 	}
 	
 	private void sendEmail(Message msg){

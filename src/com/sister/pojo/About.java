@@ -4,9 +4,15 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.sister.web.dto.AboutDTO;
+import com.sister.web.upload.UploadFileUtil;
 
 /**
  * KnxAboutAb entity. @author MyEclipse Persistence Tools
@@ -26,6 +32,7 @@ public class About implements java.io.Serializable {
 	private static final long serialVersionUID = -2343832216513212251L;
 	private Long idAb;
 	private String typeAb;
+	private Content picAb;
 	private String contentAb;
 	private String contentEnAb;
 	private Date dateCreateAb;
@@ -37,9 +44,10 @@ public class About implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public About(Long idAb, String typeAb, String contentAb,String contentEnAb, Date dateCreateAb) {
+	public About(Long idAb, String typeAb, Content picAb, String contentAb,String contentEnAb, Date dateCreateAb) {
 		this.idAb = idAb;
 		this.typeAb = typeAb;
+		this.picAb = picAb;
 		this.contentAb = contentAb;
 		this.contentEnAb = contentEnAb; 
 		this.dateCreateAb = dateCreateAb;
@@ -65,6 +73,16 @@ public class About implements java.io.Serializable {
 
 	public void setTypeAb(String typeAb) {
 		this.typeAb = typeAb;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_pic_ab")
+	public Content getPicAb() {
+		return picAb;
+	}
+
+	public void setPicAb(Content picAb) {
+		this.picAb = picAb;
 	}
 
 	@Column(name = "content_ab", length = 65535)
@@ -94,6 +112,18 @@ public class About implements java.io.Serializable {
 		this.dateCreateAb = dateCreateAb;
 	}
 
+	public AboutDTO toDTO(){
+		AboutDTO dto = new AboutDTO();
+		dto.setIdAb(idAb);
+		dto.setTypeAb(typeAb);
+		dto.setContentAb(contentAb);
+		dto.setContentEnAb(contentEnAb);
+		if(this.getPicAb() != null){
+			dto.setPicPath(UploadFileUtil.getContentPath(getPicAb()));
+			dto.setPicName(getPicAb().getOriginalFilenameCon());
+		}	
+		return dto;
+	}
 	public boolean equals(Object other) {
 		if ((this == other))
 			return true;

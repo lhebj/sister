@@ -17,7 +17,7 @@
  -->
     <rule>
         <from>^/$</from>
-        <to type="forward">/cover.do</to>
+        <to type="forward">/index.do</to>
     </rule>
     <outbound-rule>
         <note>

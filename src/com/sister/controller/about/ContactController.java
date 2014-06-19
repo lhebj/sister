@@ -21,7 +21,7 @@ public class ContactController {
 	public String index(HttpServletRequest request, HttpServletResponse response, Model model) {
 		About about = aboutService.findAboutByType(About.TYPE_CONTACT);
 		if(about != null){
-			model.addAttribute("contact", about);
+			model.addAttribute("contact", about.toDTO());
 		}
 		return "contact";
 	}

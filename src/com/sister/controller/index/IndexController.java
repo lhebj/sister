@@ -1,4 +1,4 @@
-package com.sister.controller.cover;
+package com.sister.controller.index;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class CoverController {
+public class IndexController {
 
-	@RequestMapping("/cover.do")
+	@RequestMapping("/index.do")
 	public String index(HttpServletRequest request, HttpServletResponse response, Model model) {
-		return "cover";
+		return "index";
 	}
 }
