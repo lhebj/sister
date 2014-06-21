@@ -39,7 +39,7 @@ public class BrandController {
 		Long id = ParamUtils.getLongParameter(request, "id", 0);
 		Long pId = ParamUtils.getLongParameter(request, "pId", 0);
 		try{
-			if(id==0 || pId==0){
+			if(id==0){
 				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
 			}
 			
@@ -54,22 +54,26 @@ public class BrandController {
 			List<ProductDTO> productDTOList = productService.getProductDTOListByBrandId(0, 1000, id);	
 			
 			model.addAttribute("productDTOList", productDTOList);
-			
-			//当前产品
-			Product product = productService.findProductById(pId);
-			if(product == null || product.getBrand().getIdBrd() != id){
-				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+			if(productDTOList.size() != 0){
+				if(pId == 0){
+					pId = productDTOList.get(0).getIdPrd();
+				}
+				//当前产品
+				Product product = productService.findProductById(pId);
+				if(product == null || product.getBrand().getIdBrd() != id){
+					return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+				}
+				model.addAttribute("productDTO", product.toDTO());	
+				
+				//当前产品的不同图片
+				List<ProductPic> list = productService.getProductPicListByProductId(pId);
+				List<ProductPicDTO> productPicDTOList = new ArrayList<ProductPicDTO>();
+				for(ProductPic pd: list){
+					productPicDTOList.add(pd.toDTO());
+				}
+				model.addAttribute("productPicDTOList", productPicDTOList);				
+//				JSONHelperUtil.outputDTOToJSON(brand.toDTO(), response);
 			}
-			
-			//当前产品的不同图片
-			List<ProductPic> list = productService.getProductPicListByProductId(pId);
-			List<ProductPicDTO> productPicDTOList = new ArrayList<ProductPicDTO>();
-			for(ProductPic pd: list){
-				productPicDTOList.add(pd.toDTO());
-			}
-			model.addAttribute("productPicDTOList", productPicDTOList);
-			
-//			JSONHelperUtil.outputDTOToJSON(brand.toDTO(), response);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -88,6 +92,6 @@ public class BrandController {
 			e.printStackTrace();
 		}
 //		return null;
-		return "list";
+		return "brandList";
 	}
 }

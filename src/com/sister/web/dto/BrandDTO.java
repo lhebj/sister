@@ -6,6 +6,7 @@ public class BrandDTO {
 	private Long idBrd;
 	private String nameBrd;
 	private String picPath;
+	private String picName;
 	public Long getIdBrd() {
 		return idBrd;
 	}
@@ -23,6 +24,12 @@ public class BrandDTO {
 	}
 	public void setPicPath(String picPath) {
 		this.picPath = picPath;
+	}
+	public String getPicName() {
+		return picName;
+	}
+	public void setPicName(String picName) {
+		this.picName = picName;
 	}
 	
 }

@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ include file="common/common.jsp"%>
-
+<% navBar.put("news", "thisr"); %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="description"
 	content="<%=LocalizationUtil.getClientString("SEO.Description", request)%>" />
 	
-<link href="<%=CSS_PATH%>layout.css" type="text/css" rel="stylesheet" charset="utf-8" />
+<link href="<%=CSS_PATH%>layout.css?version=<%=version%>" type="text/css" rel="stylesheet" charset="utf-8" />
 </head>
 
 <body class="bg_img">

@@ -8,7 +8,7 @@ public class ProductPicDTO {
 	private String picPathPrdp;
 	private String picNamePrdp;
 	private String dateCreatePrdp;
-	public Long getIdPrdl() {
+	public Long getIdPrdp() {
 		return idPrdp;
 	}
 	public void setIdPrdp(Long idPrdp) {
@@ -26,7 +26,7 @@ public class ProductPicDTO {
 	public void setInfoPrdp(String infoPrdp) {
 		this.infoPrdp = infoPrdp;
 	}
-	public String getPicPathPrdl() {
+	public String getPicPathPrdp() {
 		return picPathPrdp;
 	}
 	public void setPicPathPrdp(String picPathPrdp) {

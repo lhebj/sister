@@ -4,11 +4,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -268,27 +265,27 @@
 				</select></td>
 			</tr>
 			<tr>
-				<td width='60'>产品名称</td>
+				<td width='160'>产品名称</td>
 				<td><input name="namePrd" type="text"
-					style="width:900px;height:30px" value="${productDTO.namePrd}" /></td>
+					style="width:800px;height:30px" value="${productDTO.namePrd}" /></td>
 			</tr>
 			<tr>
-				<td width='60'>产品信息</td>
-				<td><textarea id="infoPrd" style="width:900px;height:200px"
+				<td width='160'>产品信息</td>
+				<td><textarea id="infoPrd" style="width:800px;height:200px"
 						name="infoPrd">${productDTO.infoPrd}</textarea></td>
 			</tr>
 			<tr>
-				<td width='60'>产品信息(英文)</td>
-				<td><textarea id="infoEnPrd" style="width:900px;height:200px"
+				<td width='160'>产品信息(英文)</td>
+				<td><textarea id="infoEnPrd" style="width:800px;height:200px"
 						name="infoPrd">${productDTO.infoEnPrd}</textarea></td>
 			</tr>
 			<tr>
-				<td width='60'>logo图片</td>
+				<td width='160'>logo图片<br>(最佳尺寸 210 * 102)</td>
 				<td><input name="logo" type="FILE" id="logo" size="50" />
-					${productDTO.logoName}</td>
+					${productDTO.logoNamePrd}</td>
 			</tr>
 			<tr>
-				<td width='60'>产品图片</td>
+				<td width='160'>产品图片<br>(最佳尺寸 1054 * 621)</td>
 				<td>
 					<table id="downloadFileTable">
 						<tr>
@@ -300,7 +297,7 @@
 						<c:forEach items="${productPicDTOList}" var="productPicDTO">
 							<tr>
 								<td>${productPicDTO.infoPrdp}</td>
-								<td>${productPicDTO.fileNamePrdp}</td>
+								<td>${productPicDTO.picNamePrdp}</td>
 								<td><input type="button" value="删除"
 									onclick="DeleteOldFile(${productPicDTO.idPrdp},event)" /></td>
 							</tr>
@@ -312,7 +309,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width='60'></td>
+				<td width='160'></td>
 				<td><input class="btn btn-primary" name="ok" type="submit"
 					value="提交"> <input type="button" value="取消" class="btn"
 					onclick="javascript:window.history.go(-1);" /></td>

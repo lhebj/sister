@@ -1,0 +1,1 @@
+function messageSubmit(){var B=$("#message").val();var A=$("#error_message");if(B==""){A.html("请输入留言").show();return }$.post("message.do?action=save",{message:B},function(C){C=$.parseJSON(C);if(!!C.success){alert("感谢您留言！");$("#message").val("");A.hide()}else{A.html(C.message).show()}})};

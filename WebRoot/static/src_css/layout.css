@@ -10,10 +10,10 @@ body{ padding-bottom:20px;}
 .bg_img{ background:url(../img/bg.jpg) repeat;}
 .content,.header,.row1{ width:1054px;}
 .content{ margin:0 auto; }
-.header{ height:194px;margin:0 auto;}
-.header .logo{ height:194px; width:277px; float:left;}
-.header .logo a{height:194px; width:277px; display:block;}
-.nav{ height:20px; line-height:20px; width:292px; float:right; margin-top:100px;}
+.header{ height:190px;margin:0 auto;}
+.header .logo{ height:90px; width:290px; float:left; margin-top: 74px;}
+.header .logo a{height:90px; width:290px; display:block;}
+.nav{ height:20px; line-height:20px; width:290px; float:right; margin-top:115px;}
 .nav a{ float:left; font-size:16px; color:#f1f2f2; margin-left:24px;}
 .nav a.thisr{ color:#58595b;}
 .row1{ height:510px;}
@@ -25,13 +25,13 @@ body{ padding-bottom:20px;}
 .about_text .post_main a{ background:#959296; font-size:16px; height:26px; width:100px; display:block; color:#f1f2f2; text-align:center; line-height:26px; float:right;}
 .load_logo{ width:355px; height:80px; margin:0 auto; margin-top:200px; display:none;}
 .row2{ height:620px; width:1054px; margin:0 auto;}
-.images-l{ position:absolute; height:620px; width:119px; left:-123px; top:0; background:url(../img/index-images-l.jpg);}
-.images-r{ position:absolute; height:620px; width:119px; right:-123px; top:0; background:url(../img/index-images-r.jpg);}
+.images-l{ position:absolute; height:620px; width:119px; left:-129px; top:0; background:url(../img/index-images-l.jpg);}
+.images-r{ position:absolute; height:620px; width:119px; right:-129px; top:0; background:url(../img/index-images-r.jpg);}
 .flex-control-nav{ display:none;}
-.row3{  width:1054px; margin:0 auto; position:relative; overflow:hidden;}
+.row3{  width:1054px; margin:0 auto; position:relative; /*overflow:hidden;*/}
 
 .rollBox{width:1054px;overflow:hidden;margin:0 auto;}
-.rollBox .Cont{width:1054px;overflow:hidden;margin:0 auto;padding-top:20px;}
+.rollBox .Cont{width:1054px;overflow:hidden;margin:0 auto;padding-top:10px;}
 .rollBox .ScrCont{width:10000000px;}
 .rollBox .Cont .pic{width:210px;float:left;text-align:center;padding-right:1px; }
 *+html .rollBox .Cont .pic{width:130px;float:left;text-align:center;padding-right:30px;}
@@ -41,9 +41,9 @@ body{ padding-bottom:20px;}
 .rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
 .rollBox #List1,.rollBox #List2{float:left;}
 .img2,.img1{ position:absolute; height:101px; width:56px; cursor:pointer;}
-.img1{ right:0; top:20px;}
-.img2{ left:0; top:20px;}
-.ad-text{ z-index:12; position:absolute; right:57px; width:162px; height:458px; padding:25px; background:url(../img/ad-text-bg.png); color:#fff; text-align:right;}
+.img1{ right:-56px; top:10px;}
+.img2{ left:-56px; top:10px;}
+.ad-text{ z-index:12; position:absolute; right:0px; width:162px; height:458px; padding:25px; background:url(../img/ad-text-bg.png); color:#fff; text-align:right;}
 .ad-text .ad-text-title{ text-decoration:none; border:none; font-size:24px;}
 .ad-text p{ font-size:16px;}
 .chn_en_btn{ margin:0 auto; height:20px; width:100px; margin-top:70px;}

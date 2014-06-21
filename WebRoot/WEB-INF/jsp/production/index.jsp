@@ -5,7 +5,7 @@
 <%@ include file="common/common.jsp"%>
 
 <%
-String path = request.getContextPath();
+	String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
@@ -15,35 +15,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=LocalizationUtil.getClientString("SEO.Title", request)%></title>
 <meta http-equiv="keywords"
-	content="<%=LocalizationUtil.getClientString("SEO.Keywords", request)%>">
+	content="<%=LocalizationUtil.getClientString("SEO.Keywords", request)%>" />
 <meta http-equiv="description"
-	content="<%=LocalizationUtil.getClientString("SEO.Description", request)%>">
-	
-<script type="text/javascript" src="<%=JS_PATH%>jquery.min.js"></script>
-<link href="<%=CSS_PATH%>layout.css?version=<%=version%>" type="text/css" rel="stylesheet" charset="utf-8">
-<script>
-$(document).ready(function(){
- 
+	content="<%=LocalizationUtil.getClientString("SEO.Description", request)%>" />
 
-    $(".load_logo").fadeIn(6000,function(){
-		//location.href = "index.html";
-		$('.chn_en_btn').fadeIn(1000);
+<script type="text/javascript" src="<%=JS_PATH%>jquery.min.js"></script>
+<link href="<%=CSS_PATH%>layout.css?version=<%=version%>"
+	type="text/css" rel="stylesheet" charset="utf-8" />
+<script>
+	$(document).ready(function() {
+
+		$(".load_logo").fadeIn(6000, function() {
+			//location.href = "index.html";
+			$('.chn_en_btn').fadeIn(1000);
 		});
-	
-  
-});
+
+	});
 </script>
 </head>
 
 <body class="bg_img">
-<div class="load_logo">
-<img src="<%=IMAGE_PATH%>load-logo.png" />
-</div>
+	<div class="load_logo">
+		<img src="<%=IMAGE_PATH%>load-logo.png" />
+	</div>
 
-<div class="chn_en_btn" style="display:none;">
+	<div class="chn_en_btn" style="display:none;">
 
-<a href="#" style="float:left;">EN</a>
-<a href="#" style="float:right;">中文</a>
-</div>
+		<a href="switchLan.do?lan=en" style="float:left;">EN</a> <a
+			href="switchLan.do?lan=zh" style="float:right;">中文</a>
+	</div>
 </body>
 </html>

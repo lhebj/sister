@@ -31,16 +31,16 @@
 		<input name="id" type="hidden" value="${brandDTO.idBrd}" />
 		<table>
 			<tr>
-				<td width='60'>品牌名称</td>
+				<td width='160'>品牌名称</td>
 				<td><input name="nameBrd" type="text"
-					style="width:900px;height:30px" value="${brandDTO.nameBrd}" /></td>
+					style="width:800px;height:30px" value="${brandDTO.nameBrd}" /></td>
 			</tr>
 			<tr>
-				<td width='60'>logo图片</td>
-				<td><input name="pic" type="FILE" id="pic" size="50" /></td>
+				<td width='160'>logo图片<br>(最佳大小 1054 * 621)</td>
+				<td><input name="pic" type="FILE" id="pic" size="50" />${brandDTO.picName}</td>
 			</tr>
 			<tr>
-				<td width='60'></td>
+				<td width='160'></td>
 				<td><input class="btn btn-primary" name="ok" type="submit"
 					value="提交"> <input type="button" value="取消" class="btn"
 					onclick="javascript:window.history.go(-1);" /></td>

@@ -83,43 +83,43 @@ insert into sister_content_con values (2,'brand-2.png','brand-2.png','667648','p
 insert into sister_content_con values (3,'brand-3.png','brand-3.png','667648','png','utf-8','brand/2014-02-01/brand-3.png','2014-02-01 15:12:00','brand');
 insert into sister_content_con values (4,'brand-4.png','brand-4.png','667648','png','utf-8','brand/2014-02-01/brand-4.png','2014-02-01 15:12:00','brand');
 
-insert into sister_content_con values (5,'b1p1-logo.png','b1p1-logo.png','667648','png','utf-8','brand/2014-02-01/b1p1-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (5,'b1p1-logo.png','b1p1-logo.png','667648','png','utf-8','product/2014-02-01/b1p1-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (6,'b1p1-1.png','b1p1-1.png','667648','png','utf-8','product/2014-02-01/b1p1-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (7,'b1p1-2.png','b1p1-2.png','667648','png','utf-8','product/2014-02-01/b1p1-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (8,'b1p1-3.png','b1p1-3.png','667648','png','utf-8','product/2014-02-01/b1p1-3.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (9,'b1p1-4.png','b1p1-4.png','667648','png','utf-8','product/2014-02-01/b1p1-4.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (10,'b1p1-5.png','b1p1-5.png','667648','png','utf-8','product/2014-02-01/b1p1-5.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (11,'b1p2-logo.png','b1p2-logo.png','667648','png','utf-8','brand/2014-02-01/b1p2-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (11,'b1p2-logo.png','b1p2-logo.png','667648','png','utf-8','product/2014-02-01/b1p2-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (12,'b1p2-1.png','b1p2-1.png','667648','png','utf-8','product/2014-02-01/b1p2-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (13,'b1p2-2.png','b1p2-2.png','667648','png','utf-8','product/2014-02-01/b1p2-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (14,'b1p2-3.png','b1p2-3.png','667648','png','utf-8','product/2014-02-01/b1p2-3.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (15,'b1p3-logo.png','b1p3-logo.png','667648','png','utf-8','brand/2014-02-01/b1p3-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (15,'b1p3-logo.png','b1p3-logo.png','667648','png','utf-8','product/2014-02-01/b1p3-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (16,'b1p3-1.png','b1p3-1.png','667648','png','utf-8','product/2014-02-01/b1p3-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (17,'b1p3-2.png','b1p3-2.png','667648','png','utf-8','product/2014-02-01/b1p3-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (18,'b1p3-3.png','b1p3-3.png','667648','png','utf-8','product/2014-02-01/b1p3-3.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (19,'b1p4-logo.png','b1p4-logo.png','667648','png','utf-8','brand/2014-02-01/b1p4-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (19,'b1p4-logo.png','b1p4-logo.png','667648','png','utf-8','product/2014-02-01/b1p4-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (20,'b1p4-1.png','b1p4-1.png','667648','png','utf-8','product/2014-02-01/b1p4-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (21,'b1p4-2.png','b1p4-2.png','667648','png','utf-8','product/2014-02-01/b1p4-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (22,'b1p4-3.png','b1p4-3.png','667648','png','utf-8','product/2014-02-01/b1p4-3.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (23,'b1p4-4.png','b1p4-4.png','667648','png','utf-8','product/2014-02-01/b1p4-4.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (24,'b1p4-5.png','b1p4-5.png','667648','png','utf-8','product/2014-02-01/b1p4-5.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (25,'b1p5-logo.png','b1p5-logo.png','667648','png','utf-8','brand/2014-02-01/b1p5-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (25,'b1p5-logo.png','b1p5-logo.png','667648','png','utf-8','product/2014-02-01/b1p5-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (26,'b1p5-1.png','b1p5-1.png','667648','png','utf-8','product/2014-02-01/b1p5-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (27,'b1p5-2.png','b1p5-2.png','667648','png','utf-8','product/2014-02-01/b1p5-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (28,'b1p5-3.png','b1p5-3.png','667648','png','utf-8','product/2014-02-01/b1p5-3.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (29,'b1p5-4.png','b1p5-4.png','667648','png','utf-8','product/2014-02-01/b1p5-4.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (30,'b1p5-5.png','b1p5-5.png','667648','png','utf-8','product/2014-02-01/b1p5-5.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (31,'b1p6-logo.png','b1p6-logo.png','667648','png','utf-8','brand/2014-02-01/b1p6-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (31,'b1p6-logo.png','b1p6-logo.png','667648','png','utf-8','product/2014-02-01/b1p6-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (32,'b1p6-1.png','b1p6-1.png','667648','png','utf-8','product/2014-02-01/b1p6-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (33,'b1p6-2.png','b1p6-2.png','667648','png','utf-8','product/2014-02-01/b1p6-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (34,'b1p6-3.png','b1p6-3.png','667648','png','utf-8','product/2014-02-01/b1p6-3.png','2014-02-01 15:12:00','product');
 
-insert into sister_content_con values (35,'b1p7-logo.png','b1p7-logo.png','667648','png','utf-8','brand/2014-02-01/b1p7-logo.png','2014-02-01 15:12:00','product');
+insert into sister_content_con values (35,'b1p7-logo.png','b1p7-logo.png','667648','png','utf-8','product/2014-02-01/b1p7-logo.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (36,'b1p7-1.png','b1p7-1.png','667648','png','utf-8','product/2014-02-01/b1p7-1.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (37,'b1p7-2.png','b1p7-2.png','667648','png','utf-8','product/2014-02-01/b1p7-2.png','2014-02-01 15:12:00','product');
 insert into sister_content_con values (38,'b1p7-3.png','b1p7-3.png','667648','png','utf-8','product/2014-02-01/b1p7-3.png','2014-02-01 15:12:00','product');
@@ -177,6 +177,69 @@ INSERT INTO sister_product_pic_prdp VALUES(24, 6, "", "",33, "2014-02-01 15:12:0
 INSERT INTO sister_product_pic_prdp VALUES(25, 7, "", "",34, "2014-02-01 15:12:00"); 
 INSERT INTO sister_product_pic_prdp VALUES(26, 7, "", "",35, "2014-02-01 15:12:00"); 
 INSERT INTO sister_product_pic_prdp VALUES(27, 7, "", "",36, "2014-02-01 15:12:00");
+
+
+INSERT INTO sister_product_pic_prdp VALUES(28, 8, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(29, 8, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(30, 8, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(31, 9, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(32, 9, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(33, 9, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(34, 10, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(35, 10, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(36, 10, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(37, 11, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(38, 11, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(39, 11, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(40, 12, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(41, 12, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(42, 12, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(43, 13, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(44, 13, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(45, 13, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(46, 14, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(47, 14, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(48, 14, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(49, 15, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(50, 15, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(51, 15, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(52, 16, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(53, 16, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(54, 16, "", "",36, "2014-02-01 15:12:00");
+
+
+INSERT INTO sister_product_pic_prdp VALUES(55, 17, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(56, 17, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(57, 17, "", "",36, "2014-02-01 15:12:00");
+
+
+INSERT INTO sister_product_pic_prdp VALUES(58, 18, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(59, 18, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(60, 18, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(61, 19, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(62, 19, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(63, 19, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(64, 19, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(65, 19, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(66, 19, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(67, 20, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(68, 20, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(69, 20, "", "",36, "2014-02-01 15:12:00");
+
+INSERT INTO sister_product_pic_prdp VALUES(70, 21, "", "",34, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(71, 21, "", "",35, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_pic_prdp VALUES(72, 21, "", "",36, "2014-02-01 15:12:00");
 /*==============================================================*/
 /* Table: sister_product_prd                                    */
 /*==============================================================*/
@@ -193,13 +256,31 @@ create table sister_product_prd
 );
 
 alter table sister_product_prd comment '产品';
-INSERT INTO sister_product_prd VALUES(1, "钻石项链-a", 1, "", "", 5, "2014-02-01 15:12:00"); 
-INSERT INTO sister_product_prd VALUES(2, "钻石项链-a", 1, "", "",11, "2014-02-01 15:12:00"); 
-INSERT INTO sister_product_prd VALUES(3, "钻石项链-a", 1, "", "",15, "2014-02-01 15:12:00"); 
-INSERT INTO sister_product_prd VALUES(4, "钻石项链-a", 1, "", "",19, "2014-02-01 15:12:00"); 
-INSERT INTO sister_product_prd VALUES(5, "钻石项链-a", 1, "", "",25, "2014-02-01 15:12:00"); 
-INSERT INTO sister_product_prd VALUES(6, "钻石项链-a", 1, "", "",31, "2014-02-01 15:12:00");
-INSERT INTO sister_product_prd VALUES(7, "钻石项链-a", 1, "", "",35, "2014-02-01 15:12:00");  
+INSERT INTO sister_product_prd VALUES(1, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.", 5, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(2, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",11, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(3, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",15, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(4, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",19, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(5, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",25, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(6, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",31, "2014-02-01 15:12:00");
+INSERT INTO sister_product_prd VALUES(7, "钻石项链-a", 1, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",35, "2014-02-01 15:12:00");  
+
+
+INSERT INTO sister_product_prd VALUES(8, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.", 5, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(9, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",11, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(10, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",15, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(11, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",19, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(12, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",25, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(13, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",31, "2014-02-01 15:12:00");
+INSERT INTO sister_product_prd VALUES(14, "钻石项链-a", 2, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",35, "2014-02-01 15:12:00");
+
+
+INSERT INTO sister_product_prd VALUES(15, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.", 5, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(16, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",11, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(17, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",15, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(18, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",19, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(19, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",25, "2014-02-01 15:12:00"); 
+INSERT INTO sister_product_prd VALUES(20, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",31, "2014-02-01 15:12:00");
+INSERT INTO sister_product_prd VALUES(21, "钻石项链-a", 3, "珍珠是一种古老的有机宝石，主要产在珍珠贝类和珠母贝类软体动物体内；而由于内分泌作用而生成的 含碳酸钙的矿物（文石）珠粒，是由大量微小的文石晶体集合而成的。", "Method Ringing peals today usually consist of between 5000-5280 changes, or permutations. On seven or more bells they must be rung without repetition of any of the changes.",35, "2014-02-01 15:12:00");
 /*==============================================================*/
 /* Table: sister_user_authority_uaut                            */
 /*==============================================================*/

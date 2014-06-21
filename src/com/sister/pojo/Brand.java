@@ -96,6 +96,7 @@ public class Brand implements java.io.Serializable {
 		dto.setNameBrd(nameBrd);
 		if(this.getPicBrd() != null){
 			dto.setPicPath(UploadFileUtil.getContentPath(getPicBrd()));
+			dto.setPicName(this.getPicBrd().getOriginalFilenameCon());
 		}	
 		return dto;
 	}
