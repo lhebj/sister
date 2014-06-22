@@ -97,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<!-- 图片列表 begin -->
 						<c:forEach items="${productDTOList}" var="productDTO">
 							<div class="pic">
-							<a href="brand.do?action=detail&id=1&pId=${productDTO.idPrd}"><img src="${productDTO.logoPathPrd}" alt="${productDTO.logoNamePrd}"
+							<a href="brand.do?action=detail&id=${brandDTO.idBrd}&pId=${productDTO.idPrd}"><img src="${productDTO.logoPathPrd}" alt="${productDTO.logoNamePrd}"
 								onload="imagezoom.call(this, 210, 102);" /></a>
 							</div>
 						</c:forEach>
