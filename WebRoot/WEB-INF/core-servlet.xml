@@ -23,7 +23,7 @@
 	<!-- Resolve logical view names to .jsp resources in the /WEB-INF/views directory -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/production/" />
+		<property name="prefix" value="/WEB-INF/jsp/production-v2/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
