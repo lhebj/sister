@@ -41,9 +41,9 @@ public class ProductPicDAOImpl implements IProductPicDAO {
 	}
 	
 	public void deleteProductPicById(Long id){
-		String hql = " delete from ProductPic where idPrdl=:idPrdl ";
+		String hql = " delete from ProductPic where idPrdp=:idPrdp ";
 		Map<String, Object> param = new HashMap<String, Object>();
-		param.put("idPrdl", id);
+		param.put("idPrdp", id);
 		basicHibernateDao.executeUpdate(hql, param);
 	}
 

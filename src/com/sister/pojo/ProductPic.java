@@ -23,7 +23,7 @@ import com.sister.web.util.DateUtil;
 public class ProductPic implements java.io.Serializable {
 	public static final String NAME_PRE = "namePrdl";
 	public static final String FILE_PRE = "dlFile";
-	public static final int MAX_UPLOADFILES = 20;
+	public static final int MAX_UPLOADFILES = 30;
 	
 	/**
 	 * TODO

@@ -25,11 +25,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script>
 	$(document).ready(function() {
 
-		$(".load_logo").fadeIn(6000, function() {
+/**
+		$(".load_logo").fadeIn(3000, function() {
 			//location.href = "index.html";
-			$('.chn_en_btn').fadeIn(1000);
+			$('.chn_en_btn').fadeIn(100);
 		});
-
+**/	
+		$(".load_logo").fadeIn(3000, function() {
+			//location.href = "index.html";
+			
+		});
+		
+		$('.chn_en_btn').fadeIn(5000);
 	});
 </script>
 </head>
@@ -40,9 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 
 	<div class="chn_en_btn" style="display:none;">
-
-		<a href="switchLan.do?lan=en" style="float:left; font-size:24px;">EN</a> <a
-			href="switchLan.do?lan=zh" style="float:right; font-size:24px;">中文</a>
+		<a href="switchLan.do?lan=en" style="float:left; font-family: Arial; font-size:24px; font-weight:100">EN</a> <a
+			href="switchLan.do?lan=zh" style="float:right; font-family: Arial; font-size:24px; font-weight:100">中文</a>
 	</div>
 </body>
 </html>

@@ -95,15 +95,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<%
 					if(LocalizationUtil.getLocale(request).equals(Locale.CHINA)){
 				%>
-				${productDTO.infoPrd}
+				${currentProductDTO.infoPrd}
 				<%
 					} else {
 				%>
-				${productDTO.infoEnPrd}
+				${currentProductDTO.infoEnPrd}
 				<%
 					}
 				%>
 			</div>
+			<div class="p-left-slides"></div>
+			<div class="p-right-slides"></div>
 			<div class="flexslider">
 				<ul class="slides">
 					<c:forEach items="${productPicDTOList}" var="productPicDTO">
@@ -126,7 +128,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<!-- 图片列表 begin -->
 						<c:forEach items="${productDTOList}" var="productDTO">
 							<c:choose>
-								<c:when test="${productDTO.idPrd==pId}">
+								<c:when test="${productDTO.idPrd==currentProductDTO.idPrd}">
 									<div class="pic">
 										<a
 											href="brand.do?action=detail&id=${brandDTO.idBrd}&pId=${productDTO.idPrd}"><img
@@ -151,6 +153,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div id="List2">
 						<!-- 图片列表 begin -->
+						<c:forEach items="${productDTOList}" var="productDTO">
+							<c:choose>
+								<c:when test="${productDTO.idPrd==currentProductDTO.idPrd}">
+									<div class="pic">
+										<a
+											href="brand.do?action=detail&id=${brandDTO.idBrd}&pId=${productDTO.idPrd}"><img
+											src="${productDTO.logoPathPrd}"
+											alt="${productDTO.logoNamePrd}"
+											onload="imagezoom.call(this, 176, 85);" 
+											style="opacity:1;"/></a>
+									</div>
+								</c:when>
+								<c:otherwise>
+									<div class="pic">
+										<a
+											href="brand.do?action=detail&id=${brandDTO.idBrd}&pId=${productDTO.idPrd}"><img
+											src="${productDTO.logoPathPrd}"
+											alt="${productDTO.logoNamePrd}"
+											onload="imagezoom.call(this, 176, 85);" /></a>
+									</div>
+								</c:otherwise>
+							</c:choose>
+
+						</c:forEach>
 						<!-- 图片列表 end -->
 					</div>
 				</div>

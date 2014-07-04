@@ -8,9 +8,14 @@
 <!--头部-->
 		<div class="header">
 			<div class="logo">
-				<a href="/sister/"><img src="<%=IMAGE_PATH%>logo.png" /></a>
+				<a href="/"><img src="<%=IMAGE_PATH%>logo-new.png" /></a>
 			</div>
-            <div class="nav">
+			<%if(LocalizationUtil.getLocale(request).equals(Locale.CHINA)){ %>
+			<div class="navZh">
+			<%}else{ %>
+			<div class="nav">
+			<%} %>
+            
             	<a href="news.do" class='<%=navBar.get("news")%> aclass'><%=LocalizationUtil.getClientString("Nav.news", request) %></a>
             	<a href="about.do" class='<%=navBar.get("about")%> aclass'><%=LocalizationUtil.getClientString("Nav.about", request) %></a>
             	<a href="contact.do" class='<%=navBar.get("contact")%> aclass'><%=LocalizationUtil.getClientString("Nav.contact", request) %></a>

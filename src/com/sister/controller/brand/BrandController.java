@@ -39,32 +39,50 @@ public class BrandController {
 		Long id = ParamUtils.getLongParameter(request, "id", 0);
 		Long pId = ParamUtils.getLongParameter(request, "pId", 0);
 		try{
-			if(id==0){
+			if(id==0 && pId==0){
 				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
 			}
 			
-			Brand brand = brandService.findBrandById(id);
-			if(brand == null){
-				return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+			Brand brand = null;
+			Product currentProduct = null; 
+			
+			if(id!=0){
+				brand = brandService.findBrandById(id);
+				if(brand == null){
+					return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+				}
 			}
+			
+			if(pId != 0){
+				currentProduct = productService.findProductById(pId);
+				if(currentProduct == null){
+					return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
+				}
+				
+				if(brand == null){
+					brand = currentProduct.getBrand();
+				}
+			}
+			
+			
 			
 			model.addAttribute("brandDTO", brand.toDTO());
 			
 			//品牌下的产品
-			List<ProductDTO> productDTOList = productService.getProductDTOListByBrandId(0, 1000, id);	
+			List<ProductDTO> productDTOList = productService.getProductDTOListByBrandId(0, 1000, brand.getIdBrd());	
 			
 			model.addAttribute("productDTOList", productDTOList);
-			model.addAttribute("pId", pId);
+			
 			if(productDTOList.size() != 0){
 				if(pId == 0){
 					pId = productDTOList.get(0).getIdPrd();
+					currentProduct = productService.findProductById(pId);
 				}
 				//当前产品
-				Product product = productService.findProductById(pId);
-				if(product == null || product.getBrand().getIdBrd() != id){
+				if(currentProduct.getBrand().getIdBrd() != brand.getIdBrd()){
 					return "redirect:/error.do?action=1&message=" + URLEncoder.encode(LocalizationUtil.getClientString("Parameter.error", request), "utf-8");
 				}
-				model.addAttribute("productDTO", product.toDTO());	
+				model.addAttribute("currentProductDTO", currentProduct.toDTO());	
 				
 				//当前产品的不同图片
 				List<ProductPic> list = productService.getProductPicListByProductId(pId);

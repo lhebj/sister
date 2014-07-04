@@ -12,12 +12,13 @@ body{ padding-bottom:20px;}
 .content,.header,.row1{ width:872px;}
 .content{ margin:0 auto; }
 .header{ height:102px;margin:0 auto; overflow:hidden;}
-.header .logo{ height:57px; width:235px; float:left; margin-top:13px;}
+.header .logo{ height:62px; width:231px; float:left; margin-top:13px;}
 .header .logo a{height:57px; width:235px; display:block;}
-.nav{ height:20px; line-height:20px; width:240px; float:right; margin-top:33px;}
-.nav .aclass{ float:left; font-size:14px; color:#f1f2f2; margin-left:20px;}
+.nav{ height:20px; line-height:20px; width:240px; float:right; margin-top:33px; font-family: Arial;}
+.navZh{ height:20px; line-height:20px; width:193px; float:right; margin-top:33px;  font-family: SimHei;}
+.aclass{ float:left; font-size:14px; color:#f1f2f2; margin-left:20px;}
 /** .nav a{ float:left; font-size:14px; color:#f1f2f2; margin-left:20px;} **/
-.nav a.thisr{ color:#58595b;}
+.thisr{ color:#58595b;}
 
 .row1{ height:510px;}
 .row1 .about_img{ width:468px; height:422px; float:left;}
@@ -39,13 +40,17 @@ color: #f1f2f2;}
 .row2-product{ height:424px; width:872px; margin:0 auto;}
 .images-l{ position:absolute; height:516px; width:119px; left:-127px; top:0; background:url(../img/index-images-l.jpg);}
 .images-r{ position:absolute; height:516px; width:119px; right:-127px; top:0; background:url(../img/index-images-r.jpg);}
+.left-slides{ position:absolute; height:516px; width:150px; left:-150px; top:0;}
+.right-slides{ position:absolute; height:516px; width:150px; right:-150px; top:0;}
+.p-left-slides{ position:absolute; height:424px; width:150px; left:-150px; top:0;}
+.p-right-slides{ position:absolute; height:424px; width:150px; right:-150px; top:0;}
 .flex-control-nav{ display:none;}
 .row3{  width:872px; margin:0 auto; position:relative; /*overflow:hidden;*/}
 
 .rollBox{width:872px;overflow:hidden;margin:0 auto;}
 .rollBox .Cont{width:872px;overflow:hidden;margin:0 auto;padding-top:8px;}
 .rollBox .ScrCont{width:10000000px;}
-.rollBox .Cont .pic{width:175px;float:left;text-align:center;padding-right:1px; background:#000; }
+.rollBox .Cont .pic{width:176px;float:left;text-align:center;padding-right:0px; background:#000; }
 *+html .rollBox .Cont .pic{width:130px;float:left;text-align:center;padding-right:30px;}
 .rollBox .Cont .pic img{display:block;margin:0 auto; opacity:0.7;}
 .rollBox .Cont .pic p{line-height:26px;color:#505050;}
@@ -95,7 +100,7 @@ color: #f1f2f2;}
 				background-color: #fff;
 				color: #999;
 				font-size: 24px;
-				font-weight: bold;
+				/*font-weight: bold;*/
 				line-height: 50px;
 				text-align: center;
 				display: block;

@@ -115,6 +115,7 @@ public class UploadFileUtil {
 				    		content.setFilepathCon(absolutePath + file.getName());
 				    		content.setDateCreateCon(new Date());
 				    		content.setMimetypeCon(mimeType);
+				    		content.setSrcCon(srcPath);
 				    		map.put(MESSAGE, "Save file success!");
 				    		map.put(SUCCESS, Boolean.TRUE);
 				    		map.put(UPLOAD_FILE, content);
@@ -187,6 +188,7 @@ public class UploadFileUtil {
 			    		content.setFilepathCon(absolutePath + file.getName());
 			    		content.setDateCreateCon(new Date());
 			    		content.setMimetypeCon(mimeType);
+			    		content.setSrcCon(srcPath);
 			    		map.put(MESSAGE, "Save file success!");
 			    		map.put(SUCCESS, Boolean.TRUE);
 			    		map.put(UPLOAD_FILE, content);

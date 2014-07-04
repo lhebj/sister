@@ -280,12 +280,12 @@
 						name="infoPrd">${productDTO.infoEnPrd}</textarea></td>
 			</tr>
 			<tr>
-				<td width='160'>logo图片<br>(最佳尺寸 175 * 85)</td>
+				<td width='160'>logo图片<br>(最佳尺寸 176 * 85)</td>
 				<td><input name="logo" type="FILE" id="logo" size="50" />
 					${productDTO.logoNamePrd}</td>
 			</tr>
 			<tr>
-				<td width='160'>产品图片<br>(最佳尺寸 872 * 516)</td>
+				<td width='160'>产品图片<br>(最佳尺寸 872 * 424)</td>
 				<td>
 					<table id="downloadFileTable">
 						<tr>

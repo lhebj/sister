@@ -77,6 +77,7 @@ public class ProductAdminController {
 			product.setNamePrd(namePrd);
 			product.setInfoPrd(StringUtil.filterWordFormatAndSomeHTML(infoPrd));
 			product.setInfoEnPrd(StringUtil.filterWordFormatAndSomeHTML(infoEnPrd));
+			product.setDateCreatePrd(new Date());
 			
 			//Logo
 			Content logo = (Content) logoMap.get(UploadFileUtil.UPLOAD_FILE);
@@ -105,11 +106,11 @@ public class ProductAdminController {
 			String infoPrdl = ParamUtils.getParameter(request, (ProductPic.NAME_PRE + i));
 			if (infoPrdl == null) {
 //				LogUtil.log.info(WebUtil.getUserId(request) + " saves ProductDownload, productId= " + product.getIdPrd() + ", namePrdl is null, break!");
-				continue;
+//				continue;
 			}
 //			String filePrdlKey = ProductDownload.FILE_PRE + i;
 			uploadFileMap = fileMap.get(ProductPic.FILE_PRE + i);
-			if (!(Boolean) uploadFileMap.get(UploadFileUtil.SUCCESS) || uploadFileMap.get(UploadFileUtil.UPLOAD_FILE) == null) {
+			if (uploadFileMap == null || !(Boolean) uploadFileMap.get(UploadFileUtil.SUCCESS) || uploadFileMap.get(UploadFileUtil.UPLOAD_FILE) == null) {
 //				LogUtil.log.info(WebUtil.getUserId(request) + " saves ProductDownload, productId= " + product.getIdPrd() + ", UPLOAD_FILE is null, break!");
 				continue;
 			}
