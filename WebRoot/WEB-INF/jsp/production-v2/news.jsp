@@ -3,9 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ include file="common/common.jsp"%>
-<% navBar.put("news", "thisr"); %>
 <%
-String path = request.getContextPath();
+	navBar.put("news", "thisr");
+%>
+<%
+	String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -17,23 +19,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	content="<%=LocalizationUtil.getClientString("SEO.Keywords", request)%>" />
 <meta http-equiv="description"
 	content="<%=LocalizationUtil.getClientString("SEO.Description", request)%>" />
-	
-<link href="<%=CSS_PATH%>layout.css?version=<%=version%>" type="text/css" rel="stylesheet" charset="utf-8" />
+
+<link href="<%=CSS_PATH%>layout.css?version=<%=version%>"
+	type="text/css" rel="stylesheet" charset="utf-8" />
 </head>
 
 <body class="bg_img">
-	<%@ include file="common/head.jsp"%>
-	<div class="content">
-        <div class="row1">
-        	<div class="about_img">
-        		<img width="468"  height="422" src="${news.picPath}" />
-        	</div>
-            <div class="about_text">
-           		${news.contentAb}
-            </div>
-        
-        </div>
+	<div class="include-center">
+		<%@ include file="common/head.jsp"%>
+		<div class="content">
+			<div class="row1">
+				<div class="about_img">
+					<img width="468" height="422" src="${news.picPath}" />
+				</div>
+				<div class="about_text">${news.contentAb}</div>
+
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript" src="<%=JS_PATH%>jquery.min.js"></script>
+	<%@ include file="common/footer.jsp"%>
 </body>
 </html>

@@ -4,11 +4,11 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<script type="text/javascript" src="<%=JS_PATH%>globle.js?version=<%=version%>"></script>
+
 <!--头部-->
 		<div class="header">
 			<div class="logo">
-				<a href="/"><img src="<%=IMAGE_PATH%>logo-new.png" /></a>
+				<a href="brand.do?action=list"><img src="<%=IMAGE_PATH%>logo-new.png" /></a>
 			</div>
 			<%if(LocalizationUtil.getLocale(request).equals(Locale.CHINA)){ %>
 			<div class="navZh">

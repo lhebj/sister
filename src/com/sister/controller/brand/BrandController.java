@@ -72,6 +72,7 @@ public class BrandController {
 			List<ProductDTO> productDTOList = productService.getProductDTOListByBrandId(0, 1000, brand.getIdBrd());	
 			
 			model.addAttribute("productDTOList", productDTOList);
+			model.addAttribute("productNum", productDTOList.size());
 			
 			if(productDTOList.size() != 0){
 				if(pId == 0){

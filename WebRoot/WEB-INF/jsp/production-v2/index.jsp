@@ -19,36 +19,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="description"
 	content="<%=LocalizationUtil.getClientString("SEO.Description", request)%>" />
 
-<script type="text/javascript" src="<%=JS_PATH%>jquery.min.js"></script>
 <link href="<%=CSS_PATH%>layout.css?version=<%=version%>"
 	type="text/css" rel="stylesheet" charset="utf-8" />
-<script>
-	$(document).ready(function() {
-
-/**
-		$(".load_logo").fadeIn(3000, function() {
-			//location.href = "index.html";
-			$('.chn_en_btn').fadeIn(100);
-		});
-**/	
-		$(".load_logo").fadeIn(3000, function() {
-			//location.href = "index.html";
-			
-		});
-		
-		$('.chn_en_btn').fadeIn(5000);
-	});
-</script>
 </head>
 
 <body class="bg_img">
-	<div class="load_logo">
-		<img src="<%=IMAGE_PATH%>load-logo.png" />
-	</div>
+	<div class="include-center-load">
+		<div class="load_logo">
+			<img src="<%=IMAGE_PATH%>load-logo.png" />
+		</div>
 
-	<div class="chn_en_btn" style="display:none;">
-		<a href="switchLan.do?lan=en" style="float:left; font-family: Arial; font-size:24px; font-weight:100">EN</a> <a
-			href="switchLan.do?lan=zh" style="float:right; font-family: Arial; font-size:24px; font-weight:100">中文</a>
+		<div class="chn_en_btn" style="display:none;">
+			<a href="switchLan.do?lan=en"
+				style="float:left; font-family: Arial; font-size:24px; font-weight:100">EN</a>
+			<a href="switchLan.do?lan=zh"
+				style="float:right; font-family: Arial; font-size:24px; font-weight:100">中文</a>
+		</div>
 	</div>
+	<%@ include file="common/footer.jsp"%>
+	
+<script>
+	$(document).ready(function() {
+
+		/**
+		 $(".load_logo").fadeIn(3000, function() {
+		 //location.href = "index.html";
+		 $('.chn_en_btn').fadeIn(100);
+		 });
+		 **/
+		$(".load_logo").fadeIn(3000, function() {
+			//location.href = "index.html";
+
+		});
+
+		$('.chn_en_btn').fadeIn(5000);
+	});
+</script>
 </body>
 </html>

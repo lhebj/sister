@@ -23,7 +23,6 @@
 	navBar.put("contact", "");
 %>
 
-
 <script>
 function imagezoom(new_w, new_h){
     var img = document.createElement('img');

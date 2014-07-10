@@ -24,90 +24,40 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	href="<%=CSS_PATH%>zzsc.css?version=<%=version%>" />
 <link type="text/css" rel="stylesheet" charset="utf-8"
 	href="<%=CSS_PATH%>flexslider.min.css?version=<%=version%>" />
-<script type="text/javascript" src="<%=JS_PATH%>jquery.min.js"></script>
-<script type="text/javascript"
-	src="<%=JS_PATH%>jquery.flexslider.min.js"></script>
-
-<script type="text/javascript">
-	$(window).load(function() {
-		$('.flexslider').flexslider();
-	});
-
-	$(document).ready(function() {
-		$('.flexslider').hover(function() {
-			$('.flex-direction-nav li a.prev').css('width', '56');
-			$('.flex-direction-nav li a.next').css('width', '56');
-			
-			$('.flex-direction-nav li a.prev').css('display', 'block');
-			$('.flex-direction-nav li a.next').css('display', 'block');
-		}, function() {
-			$('.flex-direction-nav li a.prev').css('display', 'none');
-			$('.flex-direction-nav li a.next').css('display', 'none');
-		});
-		
-		$('.flex-direction-nav li a.prev').hover(function() {
-			$('.flex-direction-nav li a.prev').css('display', 'block');
-		}, function() {
-			//$('.flex-direction-nav li a.prev').css('display', 'none');
-		});
-		
-		$('.flex-direction-nav li a.next').hover(function() {
-			$('.flex-direction-nav li a.next').css('display', 'block');
-		}, function() {
-			//$('.flex-direction-nav li a.next').css('display', 'none');
-		});
-		
-		
-		$('.left-slides').hover(function() {
-			$('.flex-direction-nav li a.prev').css('width', '56');
-			$('.flex-direction-nav li a.next').css('width', '56');
-			
-			$('.flex-direction-nav li a.prev').css('display', 'block');
-			$('.flex-direction-nav li a.next').css('display', 'block');
-		}, function() {
-			$('.flex-direction-nav li a.prev').css('display', 'none');
-			$('.flex-direction-nav li a.next').css('display', 'none');
-		});
-		
-		
-		$('.right-slides').hover(function() {
-			$('.flex-direction-nav li a.prev').css('width', '56');
-			$('.flex-direction-nav li a.next').css('width', '56');
-			
-			$('.flex-direction-nav li a.prev').css('display', 'block');
-			$('.flex-direction-nav li a.next').css('display', 'block');
-		}, function() {
-			$('.flex-direction-nav li a.prev').css('display', 'none');
-			$('.flex-direction-nav li a.next').css('display', 'none');
-		});
-	});
-</script>
-
 </head>
 
 <body class="bg_img">
-	<center>
-	<%@ include file="common/head.jsp"%>
+	<div class="include-center">
+		<%@ include file="common/head.jsp"%>
 
-	<div class="row2">
+		<div class="row2">
 
-		<div class="moduletable-banner">
-		<!-- 两边背景 -->
-		<!-- 
+			<div class="moduletable-banner">
+				<!-- 两边背景 -->
+				<!-- 
 			<div class="images-l"></div>
 			<div class="images-r"></div>
 		 -->
-		 	<div class="left-slides"></div>
-			<div class="right-slides"></div>
-			<div class="flexslider">
-				<ul class="slides">
-					<c:forEach items="${brandDTOList}" var="brandDTO">
-						<li><a href="brand.do?action=detail&id=${brandDTO.idBrd}"> <img src="${brandDTO.picPath}" alt="${brandDTO.nameBrd}" /></a></li>
-					</c:forEach>
-				</ul>
+				<div class="left-slides"></div>
+				<div class="right-slides"></div>
+				<div class="flexslider">
+					<ul class="slides">
+						<c:forEach items="${brandDTOList}" var="brandDTO">
+							<li><a href="brand.do?action=detail&id=${brandDTO.idBrd}">
+									<img src="${brandDTO.picPath}" alt="${brandDTO.nameBrd}" />
+							</a></li>
+						</c:forEach>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</center>
+	<%@ include file="common/footer.jsp"%>
+	
+<script type="text/javascript"
+	src="<%=JS_PATH%>jquery.flexslider.min.js"></script>
+	<script type="text/javascript"
+		src="<%=JS_PATH%>brand-slider-controller.js"></script>
+	
 </body>
 </html>
