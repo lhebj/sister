@@ -21,9 +21,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <link href="<%=CSS_PATH%>layout.css?version=<%=version%>"
 	type="text/css" rel="stylesheet" charset="utf-8" />
+<style>
+.include-center-load{
+
+}
+</style>
 </head>
 
 <body class="bg_img">
+
+	<div class="include-center-load">
+		Coming Soon!
+	</div>
+<!--
 	<div class="include-center-load">
 		<div class="load_logo">
 			<img src="<%=IMAGE_PATH%>load-logo.png" />
@@ -36,6 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				style="float:right; font-family: Arial; font-size:24px; font-weight:100">中文</a>
 		</div>
 	</div>
+-->
 	<%@ include file="common/footer.jsp"%>
 	
 <script>
