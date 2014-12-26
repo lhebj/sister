@@ -8,7 +8,7 @@
 <!--头部-->
 		<div class="header">
 			<div class="logo">
-				<a href="brand.do?action=list"><img src="<%=IMAGE_PATH%>logo-new.png" /></a>
+				<a href="brand.do?action=list"><img src="<%=IMAGE_PATH%>logo277_62.png" /></a>
 			</div>
 			<%if(LocalizationUtil.getLocale(request).equals(Locale.CHINA)){ %>
 			<div class="navZh">

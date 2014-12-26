@@ -26,7 +26,11 @@ body{ padding-bottom:20px;}
 	font-size:50px;
 	color:#f1f2f2;	
 }
+/*
 .bg_img{ background:url(../img/bg.jpg) repeat;}
+*/
+/*背景变成白底*/
+.bg_img{ }
 .content,.header,.row1{ width:872px;}
 .content{ margin:0 auto; }
 .header{ height:102px;margin:0 auto; overflow:hidden;}
@@ -34,7 +38,8 @@ body{ padding-bottom:20px;}
 .header .logo a{height:57px; width:235px; display:block;}
 .nav{ height:20px; line-height:20px; width:240px; float:right; margin-top:20px; font-family: Arial;}
 .navZh{ height:20px; line-height:20px; width:193px; float:right; margin-top:20px;  font-family: SimHei;}
-.aclass{ float:left; font-size:14px; color:#f1f2f2; margin-left:20px;}
+/*color:#f1f2f2; 变成 color:#888888;*/
+.aclass{ float:left; font-size:14px; color:#888888; margin-left:20px;}
 /** .nav a{ float:left; font-size:14px; color:#f1f2f2; margin-left:20px;} **/
 .thisr{ color:#58595b;}
 
@@ -67,7 +72,8 @@ color: #f1f2f2;}
 .row3{  width:872px; margin:0 auto; position:relative; /*overflow:hidden;*/}
 
 .rollBox{width:872px;overflow:hidden;margin:0 auto;padding-top:8px;}
-.rollBox .Cont{width:872px;overflow:hidden;margin:0 auto;background:#000;}
+/*最下边一条，如果不传满，也希望后边几个位置是显示50%的黑。*/
+.rollBox .Cont{width:872px;overflow:hidden;margin:0 auto;background:#000;opacity: 0.5;}
 .rollBox .ScrCont{width:10000000px;}
 .rollBox .Cont .pic{width:176px;float:left;text-align:center;padding-right:0px; background:#000; }
 *+html .rollBox .Cont .pic{width:130px;float:left;text-align:center;padding-right:30px;}
@@ -76,10 +82,15 @@ color: #f1f2f2;}
 .rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;}
 .rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
 .rollBox #List1,.rollBox #List2{float:left;background:#000; }
-.img2,.img1{ position:absolute; height:86px; width:56px; cursor:pointer;}
+.img2,.img1{ position:absolute; height:85px; width:57px; cursor:pointer;}
 .img1{ right:-56px; top:8px;}
 .img2{ left:-56px; top:8px;}
-.ad-text{ z-index:12; position:absolute; right:0px; width:162px; height:458px; padding:25px; background:url(../img/ad-text-bg.png); color:#fff; text-align:right;}
+/*
+  图片里灰色部分其实是50%的黑，半透明的，应该是压在图片上的，占1/3
+  ad-text-bg.png -> ad-text-bg-141226.png
+   width:162px; ->  width:235px;
+*/
+.ad-text{ z-index:12; position:absolute; right:0px; width:235px; height:458px; padding:25px; background:url(../img/ad-text-bg-141226.png); color:#fff; text-align:right;}
 .ad-text .ad-text-title{ text-decoration:none; border:none; font-size:24px;}
 .ad-text p{ font-size:16px;}
 .chn_en_btn{ margin:0 auto; height:20px; width:100px; margin-top:152px;}

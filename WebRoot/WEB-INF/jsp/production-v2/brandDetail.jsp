@@ -108,10 +108,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<img onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()"
 				onmouseout="ISL_StopUp()" class="img2"
-				src="<%=IMAGE_PATH%>ad_scroll_back.png" /> <img
+				src="<%=IMAGE_PATH%>ad_scroll_back-141226.png" /> <img
 				onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()"
 				onmouseout="ISL_StopDown()" class="img1"
-				src="<%=IMAGE_PATH%>ad_scroll_forward.png" />
+				src="<%=IMAGE_PATH%>ad_scroll_forward-141226.png" />
 		</div>
 		<!--row3-->
 	</div>
