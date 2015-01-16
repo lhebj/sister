@@ -21,8 +21,8 @@
             	<a href="contact.do" class='<%=navBar.get("contact")%> aclass'><%=LocalizationUtil.getClientString("Nav.contact", request) %></a>
             	<a href="javascript:void(0)" onclick="navShareClick()" class='aclass' ><%=LocalizationUtil.getClientString("Nav.share", request) %></a>
             	<div class="share-icon" id="shareIcon">
-            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weibo.png"></a>
-            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weixin.png"></a>
+            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weibo-2.png"></a>
+            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weixin-2.png"></a>
            		</div>
             </div>
             

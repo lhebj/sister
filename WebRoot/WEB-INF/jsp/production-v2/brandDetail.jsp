@@ -48,8 +48,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						}
 					%>
 				</div>
+				<%if(WebUtil.fromMobile(request)==false){ %>
 				<div class="p-left-slides"></div>
 				<div class="p-right-slides"></div>
+				<%} %>
 				<div class="flexslider">
 					<ul class="slides">
 						<c:forEach items="${productPicDTOList}" var="productPicDTO">
@@ -108,10 +110,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<img onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()"
 				onmouseout="ISL_StopUp()" class="img2"
-				src="<%=IMAGE_PATH%>ad_scroll_back-141226.png" /> <img
+				src="<%=IMAGE_PATH%>ad_scroll_back-57_85.png" /> <img
 				onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()"
 				onmouseout="ISL_StopDown()" class="img1"
-				src="<%=IMAGE_PATH%>ad_scroll_forward-141226.png" />
+				src="<%=IMAGE_PATH%>ad_scroll_forward-57_85.png" />
 		</div>
 		<!--row3-->
 	</div>

@@ -114,4 +114,18 @@ public class BrandController {
 //		return null;
 		return "brandList";
 	}
+	
+	@RequestMapping(params = "action=test")
+	public String test(HttpServletRequest request, HttpServletResponse response, Model model) {
+		try{			
+			List<BrandDTO> brandDTOList = brandService.getBrandDTOList();
+			model.addAttribute("brandDTOList", brandDTOList);
+			
+//			JSONHelperUtil.outputDTOToJSON(brandDTOList, response);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+//		return null;
+		return "brandListTest";
+	}
 }

@@ -38,8 +38,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="images-l"></div>
 			<div class="images-r"></div>
 		 -->
+		 		<%if(WebUtil.fromMobile(request)==false){ %>
 				<div class="left-slides"></div>
 				<div class="right-slides"></div>
+				<%} %>
 				<div class="flexslider">
 					<ul class="slides">
 						<c:forEach items="${brandDTOList}" var="brandDTO">

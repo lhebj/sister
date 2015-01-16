@@ -13,7 +13,23 @@ body{ padding-bottom:20px;}
 .include-center{
 	width:872px;
 	height:612px;
+	margin:auto;
+	display:none;
 }
+
+/*
+.include-center{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+        width:872px;
+        height:612px;
+}
+*/
+
 /**
 .include-center-load{
 	width:872px;
@@ -24,7 +40,8 @@ body{ padding-bottom:20px;}
 	width:350px;
 	height:60px;
 	font-size:50px;
-	color:#f1f2f2;	
+	color:#f1f2f2;
+	margin:auto;	
 }
 /*
 .bg_img{ background:url(../img/bg.jpg) repeat;}
@@ -33,7 +50,7 @@ body{ padding-bottom:20px;}
 .bg_img{ }
 .content,.header,.row1{ width:872px;}
 .content{ margin:0 auto; }
-.header{ height:102px;margin:0 auto; overflow:hidden;}
+.header{ height:102px;margin:14.5 auto 0 auto; overflow:hidden;}
 .header .logo{ height:62px; width:231px; float:left; margin-top:0px;}
 .header .logo a{height:57px; width:235px; display:block;}
 .nav{ height:20px; line-height:20px; width:240px; float:right; margin-top:20px; font-family: Arial;}
@@ -46,7 +63,7 @@ body{ padding-bottom:20px;}
 .row1{ height:510px;}
 .row1 .about_img{ width:468px; height:422px; float:left;}
 .row1 .about_text{
-background: url(../img/about-text-bg.png);
+background: url(../img/about-text-bg-150109.png);
 height: 403px;
 line-height: 21px;
 padding: 10px;

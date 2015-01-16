@@ -30,22 +30,33 @@ $(document).ready(function() {
 
 //图片描述处理
 $(function() {
+	var show=0;
 	$(".moduletable-banner-product").mouseenter(function() {
 		$(".ad-text").fadeIn(500);
-
+		show=1;
 	}).mouseleave(function() {
 		$(".ad-text").fadeOut(500);
-
+		show=0;
 	});
+	
+	
+	$(".moduletable-banner-product").click(function() {
+		if(show==0){
+			$(".ad-text").fadeIn(500);
+			show=1;
+		}else{
+			$(".ad-text").fadeOut(500);
+			show=0;
+		}
+	});
+	
+	
 
 	$('.rollBox .Cont .pic img').mousemove(function() {
-
 		$(this).css("opacity", 1);
 	}).mouseout(function() {
 		$(this).css("opacity", 0.7);
-
 	});
-
 });
 
 //箭头效果

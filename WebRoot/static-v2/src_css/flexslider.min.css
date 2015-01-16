@@ -77,11 +77,11 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endCo
 }
 
 /*
-箭头调整to-right.png -> to-right-141226.png
+箭头调整to-right.png -> to-right-57_620.png
 */
 .flex-direction-nav li a.next {
 	right: 0;
-	background: url(../img/to-right-141226.png) no-repeat right;
+	background: url(../img/to-right-57_620.png) no-repeat right;
 	margin-right:-57px;
 	
 }
@@ -92,11 +92,11 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000, endCo
 }
 
 /*
-箭头调整to-left.png -> to-left-141226.png
+箭头调整to-left.png -> to-left-57_620.png
 */
 .flex-direction-nav li a.prev {
 	left: 0;
-	background: url(../img/to-left-141226.png) no-repeat left;
+	background: url(../img/to-left-57_620.png) no-repeat left;
 	margin-left:-57px;
 }
 .flex-direction-nav li a.prev:hover {

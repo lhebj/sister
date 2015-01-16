@@ -11,8 +11,32 @@ function center(obj) {
 	var objTop = (screenHeight - obj.height())/2 + scrolltop;
 	if(objTop>0 && objLeft>0){
 		obj.css({'margin-left': objLeft + 'px', 'margin-top': objTop + 'px'});
+	}else if(objTop>0){
+		obj.css({'margin-top': objTop + 'px'});
+	}else if(objLeft>0){
+		obj.css({'margin-left': objLeft + 'px'});
 	}
+	obj.show();
 }
 
+/*
+ * 通过样式控制 margin:auto;
+ * .header{ height:102px;margin:14.5 auto 0 auto; overflow:hidden;}
+ * .include-center{
+	width:872px;
+	height:612px;
+	margin:auto;
+}
+.include-center-load{
+	width:350px;
+	height:60px;
+	font-size:50px;
+	color:#f1f2f2;
+	margin:auto;	
+}
+*/
 center($('.include-center'));
 center($('.include-center-load'));
+window.onresize = function(){  
+	center($('.include-center'));
+};
