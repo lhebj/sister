@@ -63,7 +63,7 @@ body{ padding-bottom:20px;}
 .row1{ height:510px;}
 .row1 .about_img{ width:468px; height:422px; float:left;}
 .row1 .about_text{
-background: url(../img/about-text-bg-150109.png);
+background: url(../img/about-text-bg-150116.png);
 height: 403px;
 line-height: 21px;
 padding: 10px;
@@ -107,7 +107,7 @@ color: #f1f2f2;}
   ad-text-bg.png -> ad-text-bg-141226.png
    width:162px; ->  width:235px;
 */
-.ad-text{ z-index:12; position:absolute; right:0px; width:235px; height:458px; padding:25px; background:url(../img/ad-text-bg-141226.png); color:#fff; text-align:right;}
+.ad-text{ z-index:12; position:absolute; right:0px; width:235px; height:458px; padding:25px; background:url(../img/ad-text-bg-150116.png); color:#fff; text-align:right;}
 .ad-text .ad-text-title{ text-decoration:none; border:none; font-size:24px;}
 .ad-text p{ font-size:16px;}
 .chn_en_btn{ margin:0 auto; height:20px; width:100px; margin-top:152px;}

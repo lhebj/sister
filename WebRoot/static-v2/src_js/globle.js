@@ -12,9 +12,11 @@ function center(obj) {
 	if(objTop>0 && objLeft>0){
 		obj.css({'margin-left': objLeft + 'px', 'margin-top': objTop + 'px'});
 	}else if(objTop>0){
-		obj.css({'margin-top': objTop + 'px'});
+		obj.css({'margin-left': 0 + 'px', 'margin-top': objTop + 'px'});
 	}else if(objLeft>0){
-		obj.css({'margin-left': objLeft + 'px'});
+		obj.css({'margin-left': objLeft + 'px', 'margin-top': 0 + 'px'});
+	}else{
+		obj.css({'margin-left': 0 + 'px', 'margin-top': 0 + 'px'});
 	}
 	obj.show();
 }

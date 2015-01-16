@@ -8,7 +8,7 @@
 <!--头部-->
 		<div class="header">
 			<div class="logo">
-				<a href="brand.do?action=list"><img src="<%=IMAGE_PATH%>logo277_62.png" /></a>
+				<a href="brand.do?action=list"><img src="<%=IMAGE_PATH%>logo277_62-150116.png" /></a>
 			</div>
 			<%if(LocalizationUtil.getLocale(request).equals(Locale.CHINA)){ %>
 			<div class="navZh">
@@ -21,8 +21,8 @@
             	<a href="contact.do" class='<%=navBar.get("contact")%> aclass'><%=LocalizationUtil.getClientString("Nav.contact", request) %></a>
             	<a href="javascript:void(0)" onclick="navShareClick()" class='aclass' ><%=LocalizationUtil.getClientString("Nav.share", request) %></a>
             	<div class="share-icon" id="shareIcon">
-            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weibo-2.png"></a>
-            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weixin-2.png"></a>
+            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weibo-150116.png"></a>
+            		<a href="#" class="share-a"><img src="<%=IMAGE_PATH%>weixin-150116.png"></a>
            		</div>
             </div>
             
